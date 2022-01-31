@@ -6,7 +6,7 @@ from gensim import utils
 from sklearn.pipeline import Pipeline
 
 from word2vec.w2v_corpus import W2VCorpus
-from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer, TfidfTransformer
+from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 
 
 class W2VEmb:
@@ -23,10 +23,8 @@ class W2VEmb:
         self.w2v_model = gensim.models.Word2Vec(sentences=self.wv2_corpus, min_count=1, vector_size=300)
 
     def __getitem__(self, text: str) -> np.ndarray:
-        try:
-            return self.w2v_model.wv[text]
-        except:
-            return np.array([0 for _ in range(0, self.w2v_model.vector_size)])
+        try:    return self.w2v_model.wv[text]
+        except: return np.array([0 for _ in range(0, self.w2v_model.vector_size)])
 
     def tf_idf_transformer(self, text_series):
         tfidf = Pipeline([('count', CountVectorizer(encoding='utf-8', min_df=3,
