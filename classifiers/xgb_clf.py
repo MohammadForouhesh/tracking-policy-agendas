@@ -7,19 +7,21 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
 
+from word2vec.w2v_emb import W2VEmb
+
 
 class XgbClf():
     def __init__(self, text_array: list = None, labels: list = None, load_path: str = None):
         if not isinstance(text_array, pd.Series): text_array = pd.Series(text_array)
 
         self.xgb = XGBClassifier(n_estimators=300)
-        self.emb = HandCraftEmbedding()
+        self.emb = W2VEmb()
         self.scaler = None
         if load_path is not None: self.load_model(load_path)
         else:
             assert text_array is not None and labels is not None
             text_array.fillna('', inplace=True)
-            self.emb = HandCraftEmbedding(text_array)
+            self.emb = W2VEmb(text_array)
 
             encoded = list(map(self.emb.encode, tqdm(text_array)))
             self.labels = list(labels)
