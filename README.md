@@ -63,24 +63,24 @@
       Trained word embeddings on the entire corpus of legislators’ tweets. The word2vec dictionaries are limited to the 100 most similar words to the seed words and overly general or irrelevant terms are omitted. 
       The detailed results provided in the appendix is summarised in the below table:
   
-| Dataset | Issue | Classification Method | F1-score | Recall | Precision | Accuracy | Balanced Accuracy|
-|---------|-------|-----------------------|----------|--------|-----------|----------|------------------|
-| Crawled Legislators' Tweets | Immigration (Exclusive or Not) | Naive Bayes | 0.885 | 0.853 | 0.921 | 0.813 | 0.738
-| | | XGBoost | 0.871 | 0.909 | 0.836 | 0.795 | 0.668
-| | | <b> Elastic Net </b> | <b> 0.881 </b> | <b> 0.967 </b> | <b> 0.809 </b> | <b> 0.801 </b> | <b> 0.615 </b>
-| | | Lasso | 0.871 | 0.962 | 0.797 | 0.784 | 0.586
-| | Immigration (Inclusive or Not) | Naive Bayes | 0.892 | 0.865 | 0.920 | 0.830 | 0.781
-| | | XGBoost | 0.888 | 0.916 | 0.861 | 0.828 | 0.746
-| | | <b> Elastic Net </b> | <b> 0.890 </b> | <b> 0.978 </b> | <b> 0.817 </b> | <b> 0.821 </b> | <b> 0.674 </b>
-| | | Lasso | 0.894 | 0.974 | 0.826 | 0.828 | 0.691
-| | Climent Change (No Action or Not) | Naive Bayes | 0.889 | 0.874 | 0.904 | 0.827 | 0.742
-| | | XGBoost | 0.888 | 0.896 | 0.880 | 0.818 | 0.698
-| | | Elastic Net | 0.891 | 0.963 | 0.830 | 0.811 | 0.575
-| | | <b> Lasso </b> | <b> 0.892 </b> | <b> 0.965 </b> | <b> 0.830 </b> | <b> 0.813 </b> | <b> 0.576 </b>
-| | Climent Change (Take Action or Not) | Naive Bayes | 0.687 | 0.742 | 0.640 | 0.758 | 0.746
-| | | XGBoost | 0.678 | 0.694 | 0.662 | 0.736 | 0.729
-| | | <b> Elastic Net </b> | <b> 0.706 </b> | <b> 0.764 </b> | <b> 0.655 </b> | <b> 0.745 </b> | <b> 0.748 </b>
-| | | Lasso | 0.700 | 0.764 | 0.646 | 0.738 | 0.742
+  | Dataset | Issue | Classification Method | F1-score | Recall | Precision | Accuracy | Balanced Accuracy|
+  |---------|-------|-----------------------|----------|--------|-----------|----------|------------------|
+  | Crawled Legislators' Tweets | Immigration (Exclusive or Not) | Naive Bayes | 0.885 | 0.853 | 0.921 | 0.813 | 0.738
+  | | | XGBoost | 0.871 | 0.909 | 0.836 | 0.795 | 0.668
+  | | | <b> Elastic Net </b> | <b> 0.881 </b> | <b> 0.967 </b> | <b> 0.809 </b> | <b> 0.801 </b> | <b> 0.615 </b>
+  | | | Lasso | 0.871 | 0.962 | 0.797 | 0.784 | 0.586
+  | | Immigration (Inclusive or Not) | Naive Bayes | 0.892 | 0.865 | 0.920 | 0.830 | 0.781
+  | | | XGBoost | 0.888 | 0.916 | 0.861 | 0.828 | 0.746
+  | | | <b> Elastic Net </b> | <b> 0.890 </b> | <b> 0.978 </b> | <b> 0.817 </b> | <b> 0.821 </b> | <b> 0.674 </b>
+  | | | Lasso | 0.894 | 0.974 | 0.826 | 0.828 | 0.691
+  | | Climent Change (No Action or Not) | Naive Bayes | 0.889 | 0.874 | 0.904 | 0.827 | 0.742
+  | | | XGBoost | 0.888 | 0.896 | 0.880 | 0.818 | 0.698
+  | | | Elastic Net | 0.891 | 0.963 | 0.830 | 0.811 | 0.575
+  | | | <b> Lasso </b> | <b> 0.892 </b> | <b> 0.965 </b> | <b> 0.830 </b> | <b> 0.813 </b> | <b> 0.576 </b>
+  | | Climent Change (Take Action or Not) | Naive Bayes | 0.687 | 0.742 | 0.640 | 0.758 | 0.746
+  | | | XGBoost | 0.678 | 0.694 | 0.662 | 0.736 | 0.729
+  | | | <b> Elastic Net </b> | <b> 0.706 </b> | <b> 0.764 </b> | <b> 0.655 </b> | <b> 0.745 </b> | <b> 0.748 </b>
+  | | | Lasso | 0.700 | 0.764 | 0.646 | 0.738 | 0.742
 
 
 
