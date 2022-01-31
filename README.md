@@ -65,22 +65,24 @@
   
 | Dataset | Issue | Classification Method | F1-score | Recall | Precision | Accuracy | Balanced Accuracy|
 |---------|-------|-----------------------|----------|--------|-----------|----------|------------------|
-| Crawled Legislators' Tweets | Immigration (Exclusive or Not) | Naive Bayes
-| | | XGBoost
-| | | Elastic Net
-| | | Lasso
-| | Immigration (Inclusive or Not) | Naive Bayes
-| | | XGBoost
-| | | Elastic Net
-| | | Lasso
-| | Climent Change (No Action or Not) | Naive Bayes
-| | | XGBoost
-| | | Elastic Net
-| | | Lasso
-| | Climent Change (Take Action or Not) | Naive Bayes
-| | | XGBoost
-| | | Elastic Net
-| | | Lasso
+| Crawled Legislators' Tweets | Immigration (Exclusive or Not) | Naive Bayes | 0.885 | 0.853 | 0.921 | 0.813 | 0.738
+| | | XGBoost | 0.871 | 0.909 | 0.836 | 0.795 | 0.668
+| | | Elastic Net | 0.881 | 0.967 | 0.809 | 0.801 | 0.615
+| | | Lasso | 0.871 | 0.962 | 0.797 | 0.784 | 0.586
+| | Immigration (Inclusive or Not) | Naive Bayes | 0.892 | 0.865 | 0.920 | 0.830 | 0.781
+| | | XGBoost | 0.888 | 0.916 | 0.861 | 0.828 | 0.746
+| | | Elastic Net | 0.890 | 0.978 | 0.817 | 0.821 | 0.674
+| | | Lasso | 0.894 | 0.974 | 0.826 | 0.828 | 0.691
+| | Climent Change (No Action or Not) | Naive Bayes | 0.889 | 0.874 | 0.904 | 0.827 | 0.742
+| | | XGBoost | 0.888 | 0.896 | 0.880 | 0.818 | 0.698
+| | | Elastic Net | 0.891 | 0.963 | 0.830 | 0.811 | 0.575
+| | | Lasso | 0.892 | 0.965 | 0.830 | 0.813 | 0.576
+| | Climent Change (Take Action or Not) | Naive Bayes | 0.687 | 0.742 | 0.640 | 0.758 | 0.746
+| | | XGBoost | 0.678 | 0.694 | 0.662 | 0.736 | 0.729
+| | | Elastic Net | 0.706 | 0.764 | 0.655 | 0.745 | 0.748
+| | | Lasso | 0.700 | 0.764 | 0.646 | 0.738 | 0.742
+
+
 
 
 
