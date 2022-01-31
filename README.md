@@ -34,14 +34,14 @@
 * #### Related (Previous) Works:
     According to legislator’s different channels of communications, it is divided into 8 categories:
 
-    1. Stump speeches: [Fenno 1978]()
-    2. Campaign mail: [Golbeck, Grimes and Rogers 2010]()
-    3. Television advertising: [Lau, Sigelman and Rovner 2007]()
-    4. Floor speeches: [Martin and Vanberg 2008](); [Martin 2011](); [Quinn et al. 2010]()
-    5. Press releases: [Grimmer 2010](), [2013b](); [Grimmer, Westwood and Messing 2014](); [Klüver and Sagarzazu 2016]()
-    6. Websites: [Adler](), [Gent and Overmeyer 1998](); [Anstead and Chadwick 2008](); [Druckman, Kifer and Parkin 2009]()
-    7. RSS feeds: [Cormack 2013]()
-    8. Social media posts: [Gulati and Williams 2010](); [Barbera et al. 2018](); [Radford and Sinclair 2016](); [Shapiro et al. 2014](); [Lilleker and Koc-Michalska 2013]()
+    1. Stump speeches: [Fenno 1978](https://profbrown.org/p/notes/fenno_homestyle)
+    2. Campaign mail: [Golbeck, Grimes and Rogers 2010](https://onlinelibrary.wiley.com/doi/abs/10.1002/asi.21344)
+    3. Television advertising: [Lau, Sigelman and Rovner 2007](https://onlinelibrary.wiley.com/doi/10.1111/j.1468-2508.2007.00618.x)
+    4. Floor speeches: [Martin and Vanberg 2008](https://www.jstor.org/stable/20299752); [Martin 2011](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1741-1130.2011.00316.x); [Quinn et al. 2010](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-5907.2009.00427.x)
+    5. Press releases: [Grimmer 2010](https://econpapers.repec.org/article/cuppolals/v_3a18_3ay_3a2010_3ai_3a01_3ap_3a1-35_5f01.htm); [Grimmer, Westwood and Messing 2014](https://press.princeton.edu/books/hardcover/9780691162614/the-impression-of-influence); [Klüver and Sagarzazu 2016](https://www.researchgate.net/publication/258136850_Ideological_congruency_and_decision-making_speed_The_effect_of_partisanship_across_European_Union_institutions)
+    6. Websites: [Adler, Gent and Overmeyer 1998](https://www.jstor.org/stable/440242); [Anstead and Chadwick 2008](http://www.handbook-of-internet-politics.com/pdfs/Nick_Anstead_Andrew_Chadwick_Parties_Election_Campaigning_and_Internet.pdf); [Druckman, Kifer and Parkin 2009](https://faculty.wcas.northwestern.edu/~jnd260/pub/Druckman%20Kifer%20Parkin%20APSR%202009.pdf)
+    7. RSS feeds: [Cormack 2013](https://personal.stevens.edu/~lcormack/sins_of_omission_orig.pdf)
+    8. Social media posts: [Gulati and Williams 2010](https://opensiuc.lib.siu.edu/pn_wp/43/); [Barbera et al. 2018](https://pubmed.ncbi.nlm.nih.gov/33303996/); [Radford and Sinclair 2016](https://www.semanticscholar.org/paper/Electronic-Homestyle-%3A-Tweeting-Ideology-∗-Radford-Sinclair/ac077dbf0040a13a4766f3f178c230fae4546b34); [Shapiro et al. 2014](https://m.japss.org/upload/1.%20Final%20Park.pdf); [Lilleker and Koc-Michalska 2013](https://journals.sagepub.com/doi/full/10.1177/1461444815616218)
 
 * #### Contributions of this paper:
     1. <div style="text-align: justify"> Simple, transparent, and interpretable approach to tweet classification can achieve satisfactory levels of accuracy across diverse issues. </div>
