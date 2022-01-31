@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.metrics import classification_report
 from tqdm import tqdm
 
+from classifiers.lasso_clf import LassoClf
 from classifiers.xgb_clf import XgbClf
 from word2vec.w2v_vis import reduce_dimensions, plot_with_matplotlib
 
@@ -23,5 +24,5 @@ def main(dataframe: pd.DataFrame, save_path: str):
 
 
 if __name__ == '__main__':
-    df = pd.read_excel('word2vec/test_corpus.xlsx')
-    main(df, 'test')
+    df = pd.read_excel('politics.xlsx')
+    main(df, 'politics')
