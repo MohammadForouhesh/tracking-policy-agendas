@@ -4,6 +4,7 @@ from tqdm import tqdm
 
 from classifiers.lasso_clf import LassoClf
 from classifiers.naive_bayes_clf import GNBClf
+from classifiers.pa_clf import PAClf
 from classifiers.xgb_clf import XgbClf
 from word2vec.w2v_vis import reduce_dimensions, plot_with_matplotlib
 
@@ -17,7 +18,7 @@ def inference_pipeline(model_path: str, input_text: str):
 
 
 def main(dataframe: pd.DataFrame, save_path: str):
-    xgb = GNBClf(text_array=dataframe.text, labels=dataframe.label)
+    xgb = LassoClf(text_array=dataframe.text, labels=dataframe.label)
     xgb.build()
     x_evals, y_evals, labels = reduce_dimensions(xgb.emb.w2v_model)
     plot_with_matplotlib(x_evals, y_evals, labels)
