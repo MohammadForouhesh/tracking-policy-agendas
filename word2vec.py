@@ -1,20 +1,10 @@
+from gensim import utils
 
-class Word2Vec():
-    def __init__(self):
-        pass
 
-    def __len__(self):
-        pass
+class W2VCorpus:
+    def __init__(self, corpus):
+        self.corpus = corpus
 
-    def __getitem__(self):
-        pass
-
-    def train(self):
-        pass
-
-    def most_similar_word(self, word):
-        pass
-
-    @staticmethod
-    def cosine_similarity(word1: str, word2: str) -> float:
-        pass
+    def __iter__(self):
+        for line in self.corpus:
+            yield utils.simple_preprocess(line)
