@@ -20,7 +20,7 @@ class W2VEmb:
         text_series = text_series.fillna('')
         self.tf_idf_transformation = self.tf_idf_transformer(text_series)
         self.wv2_corpus = W2VCorpus(text_series)
-        self.w2v_model = gensim.models.Word2Vec(sentences=self.wv2_corpus, min_count=3, vector_size=300)
+        self.w2v_model = gensim.models.Word2Vec(sentences=self.wv2_corpus, min_count=1, vector_size=300)
 
     def __getitem__(self, text: str) -> np.ndarray:
         try:
@@ -30,8 +30,8 @@ class W2VEmb:
 
     def tf_idf_transformer(self, text_series):
         tfidf = Pipeline([('count', CountVectorizer(encoding='utf-8', min_df=3,
-                                            max_features=300,
-                                            ngram_range=(1, 2))),
+                                                    max_features=300,
+                                                    ngram_range=(1, 2))),
                           ('tfid', TfidfTransformer(sublinear_tf=True, norm='l2'))]).fit(text_series.ravel())
         return tfidf
 
