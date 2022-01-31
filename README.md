@@ -6,12 +6,12 @@
 
 - [x] Summarizing the paper
 - [x] Outlining the details of implementations
-- [] Implement Word2Vec
-- [] Training Word2Vec
-- [] Seed words
-- [] Classification heads
-- [] Topic modeling
-- [] Results & Analysis
+- [ ] Implement Word2Vec
+- [ ] Training Word2Vec
+- [ ] Seed words
+- [ ] Classification heads
+- [ ] Topic modeling
+- [ ] Results & Analysis
 
 ## A Brief Summary of The Papers
 ### 1) Tracking Legislators’ Expressed Policy Agendas in Real Time
