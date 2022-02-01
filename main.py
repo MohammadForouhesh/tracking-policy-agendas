@@ -26,7 +26,6 @@ def main(embedding_frame:pd.DataFrame, dataframe: pd.DataFrame, save_path: str):
 
 
 if __name__ == '__main__':
-    df = pd.read_excel('politics.xlsx')
-    emb_df = pd.read_csv('w2v_emb_huge.csv')
-    print(emb_df.columns)
-    main(emb_df, df, 'politics')
+    df = pd.read_excel('vacine_sampling.xlsx')
+    # emb_df = pd.read_csv('w2v_emb_huge.csv')
+    main(df, df, 'vaccine')
