@@ -7,3 +7,4 @@ word2vec/.DS_Store
 *.pkl
 *.json
 *.xlsx
+*.csv
