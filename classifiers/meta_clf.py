@@ -2,12 +2,11 @@ import os
 import pickle
 import pandas as pd
 from tqdm import tqdm
-from xgboost import XGBClassifier
+from word2vec.w2v_emb import W2VEmb
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
 
-from word2vec.w2v_emb import W2VEmb
 
 
 class MetaClf:
