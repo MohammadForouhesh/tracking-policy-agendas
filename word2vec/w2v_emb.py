@@ -4,30 +4,30 @@ import numpy as np
 import pandas as pd
 from gensim import utils
 from sklearn.pipeline import Pipeline
-
 from word2vec.w2v_corpus import W2VCorpus
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 
 
 class W2VEmb:
-    def __init__(self, text_series=None):
+    def __init__(self, text_document=None):
         self.wv2_corpus = None
         self.w2v_model = None
         self.tf_idf_transformation = None
-        if text_series is not None: self.__init(text_series)
+        if text_document is not None: self.__init(text_document)
 
-    def __init(self, text_series: pd.Series):
-        text_series = text_series.fillna('')
-        self.tf_idf_transformation = self.tf_idf_transformer(text_series)
-        self.wv2_corpus = W2VCorpus(text_series)
-        self.w2v_model = gensim.models.Word2Vec(sentences=self.wv2_corpus, min_count=1, vector_size=300)
+    def __init(self, text_document: pd.Series):
+        text_document = text_document.fillna('')
+        self.tf_idf_transformation = self.tf_idf_transformer(text_document)
+        self.wv2_corpus = W2VCorpus(text_document)
+        self.w2v_model = gensim.models.Word2Vec(sentences=self.wv2_corpus, min_count=10,
+                                                vector_size=300, sg=1, epochs=100)
 
     def __getitem__(self, text: str) -> np.ndarray:
         try:    return self.w2v_model.wv[text]
         except: return np.array([0 for _ in range(0, self.w2v_model.vector_size)])
 
     def tf_idf_transformer(self, text_series):
-        tfidf = Pipeline([('count', CountVectorizer(encoding='utf-8', min_df=3,
+        tfidf = Pipeline([('count', CountVectorizer(encoding='utf-8', min_df=0.01, max_df=0.9,
                                                     max_features=300,
                                                     ngram_range=(1, 2))),
                           ('tfid', TfidfTransformer(sublinear_tf=True, norm='l2'))]).fit(text_series.ravel())
