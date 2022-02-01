@@ -18,7 +18,7 @@ def inference_pipeline(model_path: str, input_text: str):
 
 
 def main(dataframe: pd.DataFrame, save_path: str):
-    xgb = LassoClf(text_array=dataframe.text, labels=dataframe.label)
+    xgb = XgbClf(text_array=dataframe.text, labels=dataframe.label)
     xgb.build()
     x_evals, y_evals, labels = reduce_dimensions(xgb.emb.w2v_model)
     plot_with_matplotlib(x_evals, y_evals, labels)
@@ -26,5 +26,5 @@ def main(dataframe: pd.DataFrame, save_path: str):
 
 
 if __name__ == '__main__':
-    df = pd.read_excel('vacine_sampling.xlsx')
-    main(df, 'vaccine')
+    df = pd.read_excel('politics.xlsx')
+    main(df, 'politics')
