@@ -82,12 +82,14 @@
   | | | <b> Elastic Net </b> | <b> 0.706 </b> | <b> 0.764 </b> | <b> 0.655 </b> | <b> 0.745 </b> | <b> 0.748 </b>
   | | | Lasso | 0.700 | 0.764 | 0.646 | 0.738 | 0.742
 
-
-
-
-
-
-
+## Implementation details
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
 
 
 
