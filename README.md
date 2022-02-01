@@ -83,13 +83,7 @@
   | | | Lasso | 0.700 | 0.764 | 0.646 | 0.738 | 0.742
 
 ## Implementation details
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
+[![](https://mermaid.ink/img/pako:eNpt0E1LxDAQBuC_EuaksL147EGwH64H2YOCCpsexmS6DTbJmkyEpdv_bsoqKHROA_PMCzMTKK8JSjgEPA7i8Uk6ketu33iVLDnuRFHcnl990DcvpM6iuuqx7LFQA6mPIn4mDCSWsWjtO2lt3OH6klEtm6Ke6hFjNL1RyMY78UCo54uoF9HsVwLftpX3kbs_rl1zbc5mo3b0j96v0R2aLxIVnih2sAFLwaLR-fJp2ZTAA1mSUObWUeKAowTp5kzTUSNTqw37ADl3jLQBTOyfT05BySHRL2oM5kfaHzV_A_ifc_c)](https://mermaid-js.github.io/mermaid-live-editor/edit#pako:eNpt0E1LxDAQBuC_EuaksL147EGwH64H2YOCCpsexmS6DTbJmkyEpdv_bsoqKHROA_PMCzMTKK8JSjgEPA7i8Uk6ketu33iVLDnuRFHcnl990DcvpM6iuuqx7LFQA6mPIn4mDCSWsWjtO2lt3OH6klEtm6Ke6hFjNL1RyMY78UCo54uoF9HsVwLftpX3kbs_rl1zbc5mo3b0j96v0R2aLxIVnih2sAFLwaLR-fJp2ZTAA1mSUObWUeKAowTp5kzTUSNTqw37ADl3jLQBTOyfT05BySHRL2oM5kfaHzV_A_ifc_c)
 
 
 
