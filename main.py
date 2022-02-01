@@ -17,8 +17,8 @@ def inference_pipeline(model_path: str, input_text: str):
     return xgb.inference_proba(input_text)
 
 
-def main(dataframe: pd.DataFrame, save_path: str):
-    xgb = XgbClf(text_array=dataframe.text, labels=dataframe.label)
+def main(embedding_frame:pd.DataFrame, dataframe: pd.DataFrame, save_path: str):
+    xgb = XgbClf(text_array=dataframe.text, labels=dataframe.label, embedding_doc=embedding_frame.text)
     xgb.build()
     x_evals, y_evals, labels = reduce_dimensions(xgb.emb.w2v_model)
     plot_with_matplotlib(x_evals, y_evals, labels)
@@ -27,4 +27,6 @@ def main(dataframe: pd.DataFrame, save_path: str):
 
 if __name__ == '__main__':
     df = pd.read_excel('politics.xlsx')
-    main(df, 'politics')
+    emb_df = pd.read_csv('w2v_emb_huge.csv')
+    print(emb_df.columns)
+    main(emb_df, df, 'politics')
