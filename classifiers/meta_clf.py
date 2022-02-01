@@ -11,7 +11,7 @@ from word2vec.w2v_emb import W2VEmb
 
 
 class MetaClf:
-    def __init__(self, classifier_instance, text_array: list = None, labels: list = None, load_path: str = None):
+    def __init__(self, classifier_instance, text_array: list = None, embedding_doc: list = None, labels: list = None, load_path: str = None):
         if not isinstance(text_array, pd.Series): text_array = pd.Series(text_array)
 
         self.clf = classifier_instance
@@ -21,7 +21,7 @@ class MetaClf:
         else:
             assert text_array is not None and labels is not None
             text_array.fillna('', inplace=True)
-            self.emb = W2VEmb(text_array)
+            self.emb = W2VEmb(embedding_doc)
 
             encoded = list(map(self.emb.encode, tqdm(text_array)))
             self.labels = list(labels)
