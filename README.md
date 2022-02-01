@@ -6,10 +6,10 @@
 
 - [x] Summarizing the paper
 - [x] Outlining the details of implementations
-- [ ] Implement Word2Vec
+- [x] Implement Word2Vec
 - [ ] Training Word2Vec
 - [ ] Seed words
-- [ ] Classification heads
+- [x] Classification heads
 - [ ] Topic modeling
 - [ ] Results & Analysis
 
