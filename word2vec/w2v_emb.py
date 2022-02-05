@@ -19,7 +19,7 @@ class W2VEmb:
         text_document = text_document.fillna('')
         self.tf_idf_transformation = self.tf_idf_transformer(text_document)
         self.wv2_corpus = W2VCorpus(text_document)
-        self.w2v_model = gensim.models.Word2Vec(sentences=self.wv2_corpus, min_count=1)#, vector_size=300, epochs=20)
+        self.w2v_model = gensim.models.Word2Vec(sentences=self.wv2_corpus, min_count=1, size=900)#, vector_size=300, epochs=20)
 
     def __getitem__(self, text: str) -> np.ndarray:
         try:    return self.w2v_model.wv[text]
@@ -27,12 +27,13 @@ class W2VEmb:
 
     def tf_idf_transformer(self, text_series):
         tfidf = Pipeline([('count', CountVectorizer(encoding='utf-8', min_df=3, #max_df=0.9,
-                                                    max_features=100,
+                                                    max_features=900,
                                                     ngram_range=(1, 2))),
                           ('tfid', TfidfTransformer(sublinear_tf=True, norm='l2'))]).fit(text_series.ravel())
         return tfidf
 
     def encode(self, text: str) -> np.ndarray:
+        print(list(text))
         stream = utils.simple_preprocess(text)
         tf_idf_vec = self.tf_idf_transformation.transform(stream).toarray()
         w2v_encode = self[stream]
