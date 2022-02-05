@@ -64,4 +64,7 @@ def remove_redundant_characters(text: str) -> str:
     text = text.replace('…', ' ')
     text = text.replace('?', ' ')
     # text = ' '.join(list(map(lambda word: '' if len(word) < 3 else word, text.split())))
-    return ' '.join([word for word in text.split(' ') if len(word) != 0])
+    return ' '.join([word for word in text.split(' ') if len(word) != 0
+                     and False not in [char in 'آ ا ب پ ت ث ج چ ح خ د ذ ر ز ژ س ش ص ض ط ظ ع غ ف ق ک گ ل م ن و ه ی'
+                                       for char in word]
+                     and len(text.split(' ')) > 1])
