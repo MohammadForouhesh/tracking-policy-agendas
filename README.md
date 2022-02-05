@@ -8,10 +8,9 @@
 - [x] Outlining the details of implementations
 - [x] Implement Word2Vec
 - [x] Training Word2Vec
-- [ ] Seed words
+- [x] Seed words
 - [x] Classification heads
-- [ ] Topic modeling
-- [ ] Results & Analysis
+- [x] Results & Analysis
 
 ## A Brief Summary of The Papers
 ### 1) Tracking Legislators’ Expressed Policy Agendas in Real Time
@@ -84,3 +83,17 @@
 
 ## Implementation details
 [![](https://mermaid.ink/img/pako:eNp10s1uwjAMAOBXiXLaJHqBWw-TBi1_kzgMxAZ0B9MYiJYmXZJOQpR3X9qmG2ysp7r5bNluTjRVDGlI9xryA1lEiSTuedzsINxBkAqebxVoFghuLBkonRfmjQTBQ_miNOsuMS1J_87jA6bvgfkoQCOpjkmcbZExLvf3Tdl-lUnW3TZB7Uksqwb0Nej9C9a9WqxO38CQgQBj-I6nYLmS5waObk8QgQWDth6BlPNccFuS8W9LFhq4JHMHfbUrP_nr0dX-4WM_RiKbeFXF0ebGml5HfaVMm1e7-JaL3YyWpzO8osNbdAb8E_twRONpVHcz9SszCDo9BLkoDFmC4Oxya3FDm2B4GUz8r2sWMZE71GV7Nq0_PvlmfBvPaAphqx5oh2aoM-DM3bNTlZJQe8AMExq6V4mF1SASmsizo0XuOsKYcas0dfWEwQ6Fwqr5UaY0tLrAFkUc3LXNvDp_AYJt5H0)](https://mermaid-js.github.io/mermaid-live-editor/edit/#pako:eNp10s1uwjAMAOBXiXLaJHqBWw-TBi1_kzgMxAZ0B9MYiJYmXZJOQpR3X9qmG2ysp7r5bNluTjRVDGlI9xryA1lEiSTuedzsINxBkAqebxVoFghuLBkonRfmjQTBQ_miNOsuMS1J_87jA6bvgfkoQCOpjkmcbZExLvf3Tdl-lUnW3TZB7Uksqwb0Nej9C9a9WqxO38CQgQBj-I6nYLmS5waObk8QgQWDth6BlPNccFuS8W9LFhq4JHMHfbUrP_nr0dX-4WM_RiKbeFXF0ebGml5HfaVMm1e7-JaL3YyWpzO8osNbdAb8E_twRONpVHcz9SszCDo9BLkoDFmC4Oxya3FDm2B4GUz8r2sWMZE71GV7Nq0_PvlmfBvPaAphqx5oh2aoM-DM3bNTlZJQe8AMExq6V4mF1SASmsizo0XuOsKYcas0dfWEwQ6Fwqr5UaY0tLrAFkUc3LXNvDp_AYJt5H0)
+
+
+## Reproducing Results for XGB
+### GCPOA dataset sample
+![gcpoa](results/gcpoa_report.PNG)
+### Iranian Stock market dataset sample
+![stock](results/stock-market_report.PNG)
+### Vaccination dataset sample
+![vaccine](results/vaccine_report.PNG)
+### Filtering in Iran dataset sample
+![internet](results/internet_report.PNG)
+
+
+
