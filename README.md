@@ -1,4 +1,6 @@
 # Computational Political Science Papers Implementations
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/tracking-legislators-expressed-policy-agendas/computational-social-science-on-twitter)](https://paperswithcode.com/sota/computational-social-science-on-twitter?p=tracking-legislators-expressed-policy-agendas)
+
  This repository contains the implementation for the following papers:
  > [Tracking Legislators’ Expressed Policy Agendas in Real Time](https://osf.io/preprints/socarxiv/ync87/)
 
