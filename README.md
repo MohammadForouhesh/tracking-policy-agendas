@@ -4,7 +4,22 @@
  This repository contains the implementation for the following papers:
  > [Tracking Legislators’ Expressed Policy Agendas in Real Time](https://osf.io/preprints/socarxiv/ync87/)
 
-## TO-DO:
+# Table of Contents
+1. [TODO](#todo)
+2. [A Brief Summary of The Papers](#summary)
+    1. [Tracking Policy Agendas](#tpa)
+        1. [Introduction](#tpa_intro)
+        2. [Main Problem](#tpa_main)
+        3. [Illustrative Example](#tpa_example)
+        4. [I/O](#tpa_io)
+        5. [Motivation](#tpa_motiv)
+        6. [Related Works](#tpa_lit)
+        7. [Contributions of this paper](#tpa_contribution)
+        8. [Proposed Method](#tpa_method)
+        9. [Experiments](#tpa_exp)
+        10. [Implementation details](#tpa_imp)
+
+## TO-DO: <a name="todo"></a>
 
 - [x] Summarizing the paper
 - [x] Outlining the details of implementations
@@ -14,25 +29,25 @@
 - [x] Classification heads
 - [x] Results & Analysis
 
-## A Brief Summary of The Papers
-### 1) Tracking Legislators’ Expressed Policy Agendas in Real Time
-* #### Introduction:
+## A Brief Summary of The Papers <a name="summary"></a>
+### 1) Tracking Legislators’ Expressed Policy Agendas in Real Time <a name="tpa"></a>
+* #### Introduction: <a name="tpa_intro"></a>
   <div style="text-align: justify"> This work aims to analyse political orientation of legislators on salient policy issues through their temporally granular tweets, using a word embedding for feature extraction, and a classifier to label all legislators’ past and current relevant tweets according to whether they express a particular issue position over time. </div> 
-* #### Main Problem:
+* #### Main Problem: <a name="tpa_main"></a>
     <div style="text-align: justify"> Is it possible to accurately analyse the temporal evolution of political orientation on salient issues by applying natural language processing techniques on users tweets? </div> 
 
     <div style="text-align: justify"> The issues of concern in this paper are <b> immigration</b>, and <b>climate change</b>.  </div>
-* #### Illustrative Example:
+* #### Illustrative Example: <a name="tpa_example"></a>
     <div style="text-align: justify"> Given a tweet about immigration policy, they first encode it using word2vec enhanced dictionary, then its exclusiveness or inclusiveness can be detected using a classifier. Furthermore these results can be disaggregated to see whether it was posted from a Republican or a Democrat.  </div>
-* #### I/O:
+* #### I/O: <a name="tpa_io"></a>
   * Input: Tweets (textual modality)
   * Output: Predicted stance on the salient political issue
 
-* #### Motivation:
+* #### Motivation: <a name="tpa_motiv"></a>
     1. <div style="text-align: justify"> Using tweets to track shifts in legislators’ rhetoric is highly scalable. It can be used on any topic of interest, by any political actor with a Twitter account, in any country around the world, from the past decade or into the future. </div> 
     2. <div style="text-align: justify"> Twitter data has high temporal granularity. </div>
 
-* #### Related (Previous) Works:
+* #### Related (Previous) Works: <a name="tpa_lit"></a>
     According to legislator’s different channels of communications, it is divided into 8 categories:
 
     1. Stump speeches: [Fenno 1978](https://profbrown.org/p/notes/fenno_homestyle)
@@ -44,19 +59,19 @@
     7. RSS feeds: [Cormack 2013](https://personal.stevens.edu/~lcormack/sins_of_omission_orig.pdf)
     8. Social media posts: [Gulati and Williams 2010](https://opensiuc.lib.siu.edu/pn_wp/43/); [Barbera et al. 2018](https://pubmed.ncbi.nlm.nih.gov/33303996/); [Radford and Sinclair 2016](https://www.semanticscholar.org/paper/Electronic-Homestyle-%3A-Tweeting-Ideology-∗-Radford-Sinclair/ac077dbf0040a13a4766f3f178c230fae4546b34); [Shapiro et al. 2014](https://m.japss.org/upload/1.%20Final%20Park.pdf); [Lilleker and Koc-Michalska 2013](https://journals.sagepub.com/doi/full/10.1177/1461444815616218)
 
-* #### Contributions of this paper:
+* #### Contributions of this paper: <a name="tpa_contribution"></a>
     1. <div style="text-align: justify"> Simple, transparent, and interpretable approach to tweet classification can achieve satisfactory levels of accuracy across diverse issues. </div>
     2. <div style="text-align: justify"> Automate the process of updating and maintaining the model. </div>
     3. <div style="text-align: justify"> Develop a dynamical, real-time scalable method for tracking elected officials’ expressed policy positions through their tweets. </div> 
 
-* #### Proposed Method:
-    * ##### Stage I: (Feature Extraction)
+* #### Proposed Method: <a name="tpa_method"></a>
+    * ##### Stage I: (Feature Extraction) 
         <div style="text-align: justify"> They used Word2Vec enhanced dictionary to encode the texts. In particular, a set of stemmed seed words is identified as being relevant to the concept of interest. Then use word embeddings to identify other words that are semantically related to these seed words in the data. </div>
 
     * ##### Stage II: Classification of political stance on salient issues.
         <div style="text-align: justify"> Choice of classifier: using five-fold cross validation and comparing precision, recall, accuracy, balanced accuracy, and F1 scores to choose the best performing classifier among XGBoost, Naive Bayes, Elastic Net, Lasso. </div>
 
-* #### Experiments:
+* #### Experiments: <a name="tpa_exp"></a>
     * ##### Datasets:
       Their own making. Crawled all senators and the vast majority of members of the House tweets using twitter API from any period of interest up to 2020, excluding those who left office or were elected for the first time.
 
@@ -83,7 +98,7 @@
   | | | <b> Elastic Net </b> | <b> 0.706 </b> | <b> 0.764 </b> | <b> 0.655 </b> | <b> 0.745 </b> | <b> 0.748 </b>
   | | | Lasso | 0.700 | 0.764 | 0.646 | 0.738 | 0.742
 
-## Implementation details
+* #### Implementation details: <a name="tpa_imp"></a>
 [![](https://mermaid.ink/img/pako:eNp10s1uwjAMAOBXiXLaJHqBWw-TBi1_kzgMxAZ0B9MYiJYmXZJOQpR3X9qmG2ysp7r5bNluTjRVDGlI9xryA1lEiSTuedzsINxBkAqebxVoFghuLBkonRfmjQTBQ_miNOsuMS1J_87jA6bvgfkoQCOpjkmcbZExLvf3Tdl-lUnW3TZB7Uksqwb0Nej9C9a9WqxO38CQgQBj-I6nYLmS5waObk8QgQWDth6BlPNccFuS8W9LFhq4JHMHfbUrP_nr0dX-4WM_RiKbeFXF0ebGml5HfaVMm1e7-JaL3YyWpzO8osNbdAb8E_twRONpVHcz9SszCDo9BLkoDFmC4Oxya3FDm2B4GUz8r2sWMZE71GV7Nq0_PvlmfBvPaAphqx5oh2aoM-DM3bNTlZJQe8AMExq6V4mF1SASmsizo0XuOsKYcas0dfWEwQ6Fwqr5UaY0tLrAFkUc3LXNvDp_AYJt5H0)](https://mermaid-js.github.io/mermaid-live-editor/edit/#pako:eNp10s1uwjAMAOBXiXLaJHqBWw-TBi1_kzgMxAZ0B9MYiJYmXZJOQpR3X9qmG2ysp7r5bNluTjRVDGlI9xryA1lEiSTuedzsINxBkAqebxVoFghuLBkonRfmjQTBQ_miNOsuMS1J_87jA6bvgfkoQCOpjkmcbZExLvf3Tdl-lUnW3TZB7Uksqwb0Nej9C9a9WqxO38CQgQBj-I6nYLmS5waObk8QgQWDth6BlPNccFuS8W9LFhq4JHMHfbUrP_nr0dX-4WM_RiKbeFXF0ebGml5HfaVMm1e7-JaL3YyWpzO8osNbdAb8E_twRONpVHcz9SszCDo9BLkoDFmC4Oxya3FDm2B4GUz8r2sWMZE71GV7Nq0_PvlmfBvPaAphqx5oh2aoM-DM3bNTlZJQe8AMExq6V4mF1SASmsizo0XuOsKYcas0dfWEwQ6Fwqr5UaY0tLrAFkUc3LXNvDp_AYJt5H0)
 
 
