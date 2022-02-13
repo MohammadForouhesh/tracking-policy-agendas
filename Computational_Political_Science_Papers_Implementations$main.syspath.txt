@@ -1,7 +1,0 @@
-/
-/Applications/PyCharm.app/Contents/plugins/python/helpers/coverage_runner
-/Applications/PyCharm.app/Contents/plugins/python/helpers/coverage_runner
-/opt/homebrew/Caskroom/miniforge/base/envs/py39/lib/python39.zip
-/opt/homebrew/Caskroom/miniforge/base/envs/py39/lib/python3.9
-/opt/homebrew/Caskroom/miniforge/base/envs/py39/lib/python3.9/lib-dynload
-/opt/homebrew/Caskroom/miniforge/base/envs/py39/lib/python3.9/site-packages
