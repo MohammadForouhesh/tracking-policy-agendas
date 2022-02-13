@@ -115,13 +115,13 @@
 
 ## Reproducing Results for XGB <a name="tpa_repr"></a>
 #### GCPOA dataset sample
-![gcpoa](tracking-policy-agendas/results/gcpoa_report.PNG)
+![gcpoa](results/gcpoa_report.PNG)
 #### Iranian Stock market dataset sample
-![stock](tracking-policy-agendas/results/stock-market_report.PNG)
+![stock](results/stock-market_report.PNG)
 #### Vaccination dataset sample
-![vaccine](tracking-policy-agendas/results/vaccine_report.PNG)
+![vaccine](results/vaccine_report.PNG)
 #### Filtering in Iran dataset sample
-![internet](tracking-policy-agendas/results/internet_report.PNG)
+![internet](results/internet_report.PNG)
 
 
 
