@@ -33,7 +33,6 @@ class W2VEmb:
         return tfidf
 
     def encode(self, text: str) -> np.ndarray:
-        print(list(text))
         stream = utils.simple_preprocess(text)
         tf_idf_vec = self.tf_idf_transformation.transform(stream).toarray()
         w2v_encode = self[stream]
