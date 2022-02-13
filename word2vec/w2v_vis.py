@@ -26,6 +26,7 @@ def plot_with_matplotlib(x_evals, y_evals, labels):
     selected_indices = random.sample(indices, 25)
     for i in selected_indices:
         plt.annotate(labels[i], (x_evals[i], y_evals[i]))
+    plt.savefig('w2v_plot.png')
     plt.show()
 
 
