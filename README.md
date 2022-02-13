@@ -1,19 +1,15 @@
 # A Frameword For Tracking Legislator's Policy Agendas
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/tracking-legislators-expressed-policy-agendas/political-salient-issue-orientation-detection)](https://paperswithcode.com/sota/political-salient-issue-orientation-detection?p=tracking-legislators-expressed-policy-agendas)
 
-![workspace]
 ![ask]
-![science]
 ![version]
 ![license]
 [![PRs Welcome][prs-badge]][prs]
 [![Donate][donate-badge]][donate]
 
-[workspace]: https://img.shields.io/badge/Apple-MacBook_Pro_2021-999999?style=for-the-badge&logo=apple&logoColor=white
-[science]: http://ForTheBadge.com/images/badges/built-with-science.svg
 [ask]: https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg
-[version]: https://img.shields.io/github/realese/{username}/{repo-name}.svg
-[licence]: https://img.shields.io/github/license/{username}/{repo-name}.svg
+[version]: https://img.shields.io/github/realese/mohammadforouhesh/tracking-policy-agendas.svg
+[licence]: https://img.shields.io/github/license/mohammadforouhesh/tracking-policy-agendas.svg
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: http://makeapullrequest.com
 [donate-badge]: https://img.shields.io/badge/$-support-green.svg?style=flat-square
