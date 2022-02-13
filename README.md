@@ -1,25 +1,26 @@
 # Computational Political Science Papers Implementations
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/tracking-legislators-expressed-policy-agendas/political-salient-issue-orientation-detection)](https://paperswithcode.com/sota/political-salient-issue-orientation-detection?p=tracking-legislators-expressed-policy-agendas)
 
- This repository contains the implementation for the following papers:
+ This repository contains the implementation for the following paper:
  > [Tracking Legislators’ Expressed Policy Agendas in Real Time](https://osf.io/preprints/socarxiv/ync87/)
 
 # Table of Contents
 1. [TODO](#todo)
-2. [Tracking Policy Agendas](#tpa)
-    1. [A Brief Summary of The Papers](#summary)
-        1. [Introduction](#tpa_intro)
-        2. [Main Problem](#tpa_main)
-        3. [Illustrative Example](#tpa_example)
-        4. [I/O](#tpa_io)
-        5. [Motivation](#tpa_motiv)
-        6. [Related Works](#tpa_lit)
-        7. [Contributions of this paper](#tpa_contribution)
-        8. [Proposed Method](#tpa_method)
-        9. [Experiments](#tpa_exp)
-    2. [Implementation details](#tpa_imp)
-    3. [Reproducing Results](#tpa_repr)
+2. [A Brief Summary of The Papers](#summary)
+    1. [Introduction](#tpa_intro)
+    2. [Main Problem](#tpa_main)
+    3. [Illustrative Example](#tpa_example)
+    4. [I/O](#tpa_io)
+    5. [Motivation](#tpa_motiv)
+    6. [Related Works](#tpa_lit)
+    7. [Contributions of this paper](#tpa_contribution)
+    8. [Proposed Method](#tpa_method)
+    9. [Experiments](#tpa_exp)
+3. [Implementation details](#tpa_imp)
+4. [Reproducing Results](#tpa_repr)
 
+
+# 1) Tracking Legislators’ Expressed Policy Agendas in Real Time <a name="tpa"></a>
 ## TO-DO: <a name="todo"></a>
 
 - [x] Summarizing the paper
@@ -30,8 +31,7 @@
 - [x] Classification heads
 - [x] Results & Analysis
 
-## 1) Tracking Legislators’ Expressed Policy Agendas in Real Time <a name="tpa"></a>
-### A Brief Summary of The Papers <a name="summary"></a>
+## A Brief Summary of The Papers <a name="summary"></a>
 * #### Introduction: <a name="tpa_intro"></a>
   <div style="text-align: justify"> This work aims to analyse political orientation of legislators on salient policy issues through their temporally granular tweets, using a word embedding for feature extraction, and a classifier to label all legislators’ past and current relevant tweets according to whether they express a particular issue position over time. </div> 
 * #### Main Problem: <a name="tpa_main"></a>
@@ -99,11 +99,11 @@
   | | | <b> Elastic Net </b> | <b> 0.706 </b> | <b> 0.764 </b> | <b> 0.655 </b> | <b> 0.745 </b> | <b> 0.748 </b>
   | | | Lasso | 0.700 | 0.764 | 0.646 | 0.738 | 0.742
 
-### Implementation details: <a name="tpa_imp"></a>
+## Implementation details: <a name="tpa_imp"></a>
 [![](https://mermaid.ink/img/pako:eNp10s1uwjAMAOBXiXLaJHqBWw-TBi1_kzgMxAZ0B9MYiJYmXZJOQpR3X9qmG2ysp7r5bNluTjRVDGlI9xryA1lEiSTuedzsINxBkAqebxVoFghuLBkonRfmjQTBQ_miNOsuMS1J_87jA6bvgfkoQCOpjkmcbZExLvf3Tdl-lUnW3TZB7Uksqwb0Nej9C9a9WqxO38CQgQBj-I6nYLmS5waObk8QgQWDth6BlPNccFuS8W9LFhq4JHMHfbUrP_nr0dX-4WM_RiKbeFXF0ebGml5HfaVMm1e7-JaL3YyWpzO8osNbdAb8E_twRONpVHcz9SszCDo9BLkoDFmC4Oxya3FDm2B4GUz8r2sWMZE71GV7Nq0_PvlmfBvPaAphqx5oh2aoM-DM3bNTlZJQe8AMExq6V4mF1SASmsizo0XuOsKYcas0dfWEwQ6Fwqr5UaY0tLrAFkUc3LXNvDp_AYJt5H0)](https://mermaid-js.github.io/mermaid-live-editor/edit/#pako:eNp10s1uwjAMAOBXiXLaJHqBWw-TBi1_kzgMxAZ0B9MYiJYmXZJOQpR3X9qmG2ysp7r5bNluTjRVDGlI9xryA1lEiSTuedzsINxBkAqebxVoFghuLBkonRfmjQTBQ_miNOsuMS1J_87jA6bvgfkoQCOpjkmcbZExLvf3Tdl-lUnW3TZB7Uksqwb0Nej9C9a9WqxO38CQgQBj-I6nYLmS5waObk8QgQWDth6BlPNccFuS8W9LFhq4JHMHfbUrP_nr0dX-4WM_RiKbeFXF0ebGml5HfaVMm1e7-JaL3YyWpzO8osNbdAb8E_twRONpVHcz9SszCDo9BLkoDFmC4Oxya3FDm2B4GUz8r2sWMZE71GV7Nq0_PvlmfBvPaAphqx5oh2aoM-DM3bNTlZJQe8AMExq6V4mF1SASmsizo0XuOsKYcas0dfWEwQ6Fwqr5UaY0tLrAFkUc3LXNvDp_AYJt5H0)
 
 
-### Reproducing Results for XGB <a name="tpa_repr"></a>
+## Reproducing Results for XGB <a name="tpa_repr"></a>
 #### GCPOA dataset sample
 ![gcpoa](tracking-policy-agendas/results/gcpoa_report.PNG)
 #### Iranian Stock market dataset sample
