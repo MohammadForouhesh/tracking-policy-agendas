@@ -1,8 +1,6 @@
 # A Frameword For Tracking Legislator's Policy Agendas
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/tracking-legislators-expressed-policy-agendas/political-salient-issue-orientation-detection)](https://paperswithcode.com/sota/political-salient-issue-orientation-detection?p=tracking-legislators-expressed-policy-agendas)
 
-![ask]
-
 [![Build Status](https://scrutinizer-ci.com/g/MohammadForouhesh/tracking-policy-agendas/badges/build.png?b=main)](https://scrutinizer-ci.com/g/MohammadForouhesh/tracking-policy-agendas/build-status/main)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/MohammadForouhesh/tracking-policy-agendas/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/MohammadForouhesh/tracking-policy-agendas/?branch=main)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/MohammadForouhesh/tracking-policy-agendas/badges/code-intelligence.svg?b=main&color=cyan&style=plastic)](https://scrutinizer-ci.com/code-intelligence)
@@ -10,8 +8,9 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/26cc09040c2262f3ecb7/maintainability)](https://codeclimate.com/github/MohammadForouhesh/tracking-policy-agendas/maintainability)
 ![Last commit](https://img.shields.io/github/last-commit/MohammadForouhesh/tracking-policy-agendas)
 ![license](https:/img.shields.io/github/license/MohammadForouhesh/tracking-policy-agendas)
+![ask]
 
-[ask]: https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg
+[ask]: https://img.shields.io/badge/Ask%20me-anything-1.svg
 
  This repository contains the implementation for the following paper:
  > [Tracking Legislators’ Expressed Policy Agendas in Real Time](https://osf.io/preprints/socarxiv/ync87/)
