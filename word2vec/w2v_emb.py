@@ -19,7 +19,7 @@ class W2VEmb:
         text_document = text_document.fillna('')
         self.tf_idf_transformation = self.tf_idf_transformer(text_document)
         self.wv2_corpus = W2VCorpus(text_document)
-        self.w2v_model = gensim.models.Word2Vec(sentences=self.wv2_corpus, min_count=1, size=900)#, vector_size=300, epochs=20)
+        self.w2v_model = gensim.models.Word2Vec(sentences=self.wv2_corpus, min_count=1, vector_size=900, epochs=20)
 
     def __getitem__(self, text: str) -> np.ndarray:
         try:    return self.w2v_model.wv[text]
