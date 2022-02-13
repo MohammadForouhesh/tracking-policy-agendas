@@ -2,19 +2,13 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/tracking-legislators-expressed-policy-agendas/political-salient-issue-orientation-detection)](https://paperswithcode.com/sota/political-salient-issue-orientation-detection?p=tracking-legislators-expressed-policy-agendas)
 
 ![ask]
-![version]
-![license]
-[![PRs Welcome][prs-badge]][prs]
-[![Donate][donate-badge]][donate]
 
-[ask]: https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg
-[version]: https://img.shields.io/github/realese/mohammadforouhesh/tracking-policy-agendas.svg
-[licence]: https://img.shields.io/github/license/mohammadforouhesh/tracking-policy-agendas.svg
-[prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
-[prs]: http://makeapullrequest.com
-[donate-badge]: https://img.shields.io/badge/$-support-green.svg?style=flat-square
-[donate]: http://kcd.im/donate
-[coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
+[![Build Status](https://scrutinizer-ci.com/g/MohammadForouhesh/tracking-policy-agendas/badges/build.png?b=main)](https://scrutinizer-ci.com/g/MohammadForouhesh/tracking-policy-agendas/build-status/main)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/MohammadForouhesh/tracking-policy-agendas/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/MohammadForouhesh/tracking-policy-agendas/?branch=main)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/MohammadForouhesh/tracking-policy-agendas/badges/code-intelligence.svg?b=main)](https://scrutinizer-ci.com/code-intelligence)
+![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/MohammadForouhesh/tracking-policy-agendas/main?db571f)
+
+[ask]: https://img.shields.io/badge/Ask%20me-anything-abc9c.svg
 
  This repository contains the implementation for the following paper:
  > [Tracking Legislators’ Expressed Policy Agendas in Real Time](https://osf.io/preprints/socarxiv/ync87/)
