@@ -1,7 +1,7 @@
 # A Frameword For Tracking Legislator's Policy Agendas
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/tracking-legislators-expressed-policy-agendas/political-salient-issue-orientation-detection)](https://paperswithcode.com/sota/political-salient-issue-orientation-detection?p=tracking-legislators-expressed-policy-agendas)
 
-[![workspace][workspace]
+[![workspace]
 [![version-badge][version-badge]][versions]
 [![license-badge][license-badge]][license]
 [![PRs Welcome][prs-badge]][prs]
