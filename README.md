@@ -1,4 +1,4 @@
-# Computational Political Science Papers Implementations
+# A Frameword For Tracking Legislator's Policy Agendas
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/tracking-legislators-expressed-policy-agendas/political-salient-issue-orientation-detection)](https://paperswithcode.com/sota/political-salient-issue-orientation-detection?p=tracking-legislators-expressed-policy-agendas)
 
  This repository contains the implementation for the following paper:
