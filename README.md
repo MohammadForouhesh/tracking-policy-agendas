@@ -1,14 +1,10 @@
 # A Frameword For Tracking Legislator's Policy Agendas
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/tracking-legislators-expressed-policy-agendas/political-salient-issue-orientation-detection)](https://paperswithcode.com/sota/political-salient-issue-orientation-detection?p=tracking-legislators-expressed-policy-agendas)
-# custom-badges
-
-Just a repo for me to keep my custom badges around
 
 [![version-badge][version-badge]][versions]
 [![license-badge][license-badge]][license]
 [![PRs Welcome][prs-badge]][prs]
 [![Donate][donate-badge]][donate]
-[![Code of Conduct][coc-badge]][coc]
 
 [versions]: https://github.com/mohammadforouhesh/tracking-policy-agendas/releases
 [version-badge]: https://img.shields.io/github/tag/kentcdodds/custom-badges.svg?style=flat-square
