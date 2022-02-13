@@ -7,7 +7,6 @@
 [![Code Coverage](https://scrutinizer-ci.com/g/MohammadForouhesh/tracking-policy-agendas/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/MohammadForouhesh/tracking-policy-agendas/?branch=main)
 [![Maintainability](https://api.codeclimate.com/v1/badges/26cc09040c2262f3ecb7/maintainability)](https://codeclimate.com/github/MohammadForouhesh/tracking-policy-agendas/maintainability)
 ![Last commit](https://img.shields.io/github/last-commit/MohammadForouhesh/tracking-policy-agendas)
-![license](https:/img.shields.io/github/license/MohammadForouhesh/tracking-policy-agendas)
 ![ask]
 
 [ask]: https://img.shields.io/badge/Ask%20me-anything-1.svg
