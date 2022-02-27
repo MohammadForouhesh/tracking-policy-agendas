@@ -1,5 +1,4 @@
 from sklearn.naive_bayes import GaussianNB
-from xgboost import XGBClassifier
 from classifiers.meta_clf import MetaClf
 
 
