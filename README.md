@@ -114,14 +114,34 @@
 
 
 ## Reproducing Results for XGB <a name="tpa_repr"></a>
-#### GCPOA dataset sample
-![gcpoa](results/gcpoa_report.PNG)
+#### Joint Comprehensive Plan of Action dataset sample
+![jcpoa](results/gcpoa_report.PNG)
 #### Iranian Stock market dataset sample
 ![stock](results/stock-market_report.PNG)
 #### Vaccination dataset sample
 ![vaccine](results/vaccine_report.PNG)
 #### Filtering in Iran dataset sample
 ![internet](results/internet_report.PNG)
+
+
+  | Dataset | Issue | Classification Method | F1-score | Recall | Precision | Accuracy | Balanced Accuracy|
+  |---------|-------|-----------------------|----------|--------|-----------|----------|------------------|
+  | Crawled Persian Tweets | JCPOA (Relevant or Not) | Naive Bayes | 0.885 | 0.853 | 0.921 | 0.813 | 0.738
+  | | | XGBoost     | 0.999 | 0.999 | 0.999 | 0.999 | 0.999
+  | | | Elastic Net | 0.881 | 0.967 | 0.809 | 0.801 | 0.615 
+  | | | Lasso       | 0.871 | 0.962 | 0.797 | 0.784 | 0.586
+  | | Stock Market (Relevant or Not) | Naive Bayes | 0.892 | 0.865 | 0.920 | 0.830 | 0.781
+  | | | XGBoost     | 0.999 | 0.999 | 1.000 | 0.999 | 0.999
+  | | | Elastic Net | 0.890 | 0.978 | 0.817 | 0.821 | 0.674
+  | | | Lasso       | 0.894 | 0.974 | 0.826 | 0.828 | 0.691
+  | | Vaccination (Relevant or Not) | Naive Bayes | 0.889 | 0.874 | 0.904 | 0.827 | 0.742
+  | | | XGBoost     | 1.000 | 1.000 | 1.000 | 1.000 | 1.000
+  | | | Elastic Net | 0.891 | 0.963 | 0.830 | 0.811 | 0.575
+  | | | Lasso       | 0.892 | 0.965 | 0.830 | 0.813 | 0.576
+  | | Filtering (Relevant or Not) | Naive Bayes | 0.687 | 0.742 | 0.640 | 0.758 | 0.746
+  | | | XGBoost     | 0.678 | 0.694 | 0.662 | 0.736 | 0.729
+  | | | Elastic Net | 0.706 | 0.764 | 0.655 | 0.745 | 0.748
+  | | | Lasso       | 0.700 | 0.764 | 0.646 | 0.738 | 0.742
 
 
 
