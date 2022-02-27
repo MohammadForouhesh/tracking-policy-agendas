@@ -1,10 +1,7 @@
-import numpy as np
 import pandas as pd
 from tqdm import tqdm
 from classifiers.pa_clf import PAClf
 from classifiers.xgb_clf import XgbClf
-from classifiers.lasso_clf import LassoClf
-from classifiers.naive_bayes_clf import GNBClf
 from preprocess.preprocessing import remove_emoji, remove_redundant_characters
 from word2vec.w2v_vis import reduce_dimensions, plot_with_matplotlib
 
