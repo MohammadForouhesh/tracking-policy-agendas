@@ -1,5 +1,5 @@
 from sklearn.linear_model import SGDClassifier
-from classifiers.meta_clf import MetaClf
+from .meta_clf import MetaClf
 
 
 class LassoClf(MetaClf):
