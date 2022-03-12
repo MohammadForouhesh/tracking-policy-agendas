@@ -2,7 +2,7 @@
 *.iml
 *.xml
 *.pyc
-tracking-policy-agendas/word2vec/.DS_Store
+tracking_policy_agendas/word2vec/.DS_Store
 .DS_Store
 *.pkl
 *.json
