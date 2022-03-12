@@ -31,7 +31,7 @@ def plot_with_matplotlib(x_evals, y_evals, labels):
 
 
 if __name__ == '__main__':
-    from word2vec.w2v_corpus import W2VCorpus
+    from .w2v_corpus import W2VCorpus
     import pandas as pd
     import gensim.models
     corpus = pd.read_excel('test_corpus.xlsx')
