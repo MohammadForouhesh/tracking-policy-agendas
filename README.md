@@ -40,6 +40,10 @@
 - [x] Seed words
 - [x] Classification heads
 - [x] Results & Analysis
+- [ ] Tests&Coverage
+- [ ] Documentation
+- [ ] CI/CD
+- [ ] Smooth Installation
 
 ## A Brief Summary of The Papers <a name="summary"></a>
 * #### Introduction: <a name="tpa_intro"></a>
