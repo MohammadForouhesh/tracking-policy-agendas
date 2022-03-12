@@ -8,4 +8,3 @@ class W2VCorpus:
     def __iter__(self):
         for line in self.corpus:
             yield utils.simple_preprocess(line)
-
