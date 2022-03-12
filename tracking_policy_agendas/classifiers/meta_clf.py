@@ -31,11 +31,11 @@ class MetaClf:
         scaler.fit(encoded)
         return scaler
 
-    def build(self):
+    def fit(self):
         X_train, X_test, y_train, y_test = train_test_split(self.encoded_input, self.labels, test_size=0.2,
                                                             random_state=42, stratify=self.labels)
         self.clf.fit(X_train, y_train)
-        self.clf.score(X_test, y_test)
+        print('score: ', self.clf.score(X_test, y_test))
         print('============================trian============================')
         print(classification_report(y_train, self.clf.predict(X_train)))
         print('=============================test============================')
