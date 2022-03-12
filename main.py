@@ -31,8 +31,8 @@ def main(embedding_frame:pd.DataFrame, dataframe: pd.DataFrame, save_path: str):
 
 if __name__ == '__main__':
     df = pd.read_excel('vacine_sampling.xlsx')[['text', 'prep_text', 'label']]
-    emb_df = pd.read_excel('clf_status_id_dummy.xlsx').sample(100000)
-    emb_df = emb_df[emb_df.is__welfare == 1][['text', 'prep_text']]
+    emb_df = pd.read_excel('clf_status_id_dummy.xlsx')
+    emb_df = emb_df[['text', 'prep_text']]
     df['prep_text'] = df.prep_text.apply(lambda item: remove_redundant_characters(remove_emoji(item)))
     df = df.replace('', float('NaN')).dropna()
     emb_df['prep_text'] = emb_df.prep_text.apply(lambda item: remove_redundant_characters(remove_emoji(item)))
