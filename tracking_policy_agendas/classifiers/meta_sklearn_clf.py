@@ -1,10 +1,11 @@
+import os
 import pickle
 from .meta_clf import MetaClf
 
 
 class MetaSkLearnClf(MetaClf):
-    def __init__(self, sklearn_clf_instance, **kwargs):
-        super().__init__(classifier_instance=sklearn_clf_instance, **kwargs)
+    def __init__(self, classifier_instance, **kwargs):
+        super().__init__(classifier_instance=classifier_instance, **kwargs)
 
     def load_model(self, load_path: str):
         loading_prep = lambda string: f'model_dir/{load_path}/{string}'
