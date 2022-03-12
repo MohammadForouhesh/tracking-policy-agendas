@@ -7,3 +7,5 @@ matplotlib==3.5.1
 xgboost==1.5.0
 pytest>=6.2.5
 coverage>=6.2
+setuptools==58.0.4
+requests==2.26.0
