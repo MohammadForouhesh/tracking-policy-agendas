@@ -1,5 +1,5 @@
 from sklearn.naive_bayes import GaussianNB
-from meta_clf import MetaClf
+from .meta_clf import MetaClf
 
 
 class GNBClf(MetaClf):
