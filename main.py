@@ -1,17 +1,16 @@
 import pandas as pd
 from tqdm import tqdm
-from classifiers.pa_clf import PAClf
-from classifiers.xgb_clf import XgbClf
-from preprocess.preprocessing import remove_emoji, remove_redundant_characters
-from word2vec.w2v_vis import reduce_dimensions, plot_with_matplotlib
+from tracking_policy_agendas.classifiers.pa_clf import PAClf
+from tracking_policy_agendas.classifiers.xgb_clf import XgbClf
+from tracking_policy_agendas.preprocess.preprocessing import remove_emoji, remove_redundant_characters
+from tracking_policy_agendas.word2vec.w2v_vis import reduce_dimensions, plot_with_matplotlib
 
 tqdm.pandas()
 
 
 def inference_pipeline(model_path: str, input_text: str):
     xgb = XgbClf(text_array=None, labels=None, load_path=model_path)
-    # return xgb.inference(input_text)
-    return xgb.inference_proba(input_text)
+    return xgb.predict(input_text)
 
 
 def main(embedding_frame:pd.DataFrame, dataframe: pd.DataFrame, save_path: str):
