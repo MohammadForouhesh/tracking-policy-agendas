@@ -51,7 +51,7 @@ def setup_package():
         license='MIT',
         author='MohammadForouhesh',
         author_email='Mohammadh.Forouhesh@gmail.com',
-        description='Persian Twitter policy agenda tracking framework',
+        description='A Persian Twitter policy agenda tracking framework',
         package_data={"": ["*.pyx", "*.pxd", "*.pxi", "*.cu"]},
     )
 
