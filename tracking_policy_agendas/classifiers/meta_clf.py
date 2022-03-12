@@ -60,7 +60,7 @@ class MetaClf:
         with open(saving_prep('scaler.pkl'), 'wb') as f:
             pickle.dump(self.scaler, f, pickle.HIGHEST_PROTOCOL)
 
-    def inference(self, input_text: str):
+    def predict(self, input_text: str):
         vector = self.scaler.transform(self.emb.encode(input_text).reshape(1, -1))
         return self.clf.predict(vector)[0]
 
