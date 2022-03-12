@@ -4,8 +4,8 @@ import numpy as np
 import pandas as pd
 from gensim import utils
 from sklearn.pipeline import Pipeline
-from word2vec.w2v_corpus import W2VCorpus
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
+from .w2v_corpus import W2VCorpus
 
 
 class W2VEmb:
