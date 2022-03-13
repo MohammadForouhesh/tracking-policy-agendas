@@ -40,7 +40,7 @@
 - [x] Seed words
 - [x] Classification heads
 - [x] Results & Analysis
-- [ ] Tests&Coverage
+- [x] Tests&Coverage
 - [ ] Documentation
 - [ ] CI/CD
 - [ ] Smooth Installation
