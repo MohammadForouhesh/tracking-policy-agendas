@@ -33,7 +33,6 @@ def downloader(path: str, save_path: str) -> Union[int, None]:
     :param save_path:   The intended storage path.
     :return:            If the file exists, it returns 0 (int), otherwise nothing would be returned.
     """
-    if os.path.isfile(save_path): return 0
     try:
         model_bin = requests.get(path, allow_redirects=True)
         with zipfile.ZipFile(BytesIO(model_bin.content)) as resource:
@@ -42,14 +41,15 @@ def downloader(path: str, save_path: str) -> Union[int, None]:
         raise Exception('not a proper webpage')
 
 
-def get_resources(dir_path: str, resource_name: str) -> str:
+def get_resources(dir_path: str, resource_name: str) -> Union[int, str]:
     """
     A tool to download required resources over internet.
     :param dir_path:        Path to the https link of the resource
     :param resource_name:   Resource name.
     :return:                Path to the downloaded resource.
     """
-    save_dir = dir_path + '/model_dir/'
+    save_dir = dir_path + 'model_dir/'
+    if os.path.isdir(save_dir + f'{resource_name}/'): return 0
     os.makedirs(save_dir, exist_ok=True)
     downloader(path=http_dict[resource_name], save_path=save_dir)
     return str(save_dir + resource_name)
