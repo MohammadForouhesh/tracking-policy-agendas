@@ -15,10 +15,9 @@ supported http links are:
 
 import os
 from typing import Union
-
-import requests
 import zipfile
 from io import BytesIO
+import requests
 
 http_dict = {'xgb_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/xgb_vaccine.zip',
              'pa_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/pa_vaccine.zip',
