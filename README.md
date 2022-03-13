@@ -42,7 +42,7 @@
 - [x] Results & Analysis
 - [x] Tests&Coverage
 - [ ] Documentation
-- [ ] CI/CD
+- [x] CI/CD
 - [ ] Smooth Installation
 
 ## A Brief Summary of The Papers <a name="summary"></a>
