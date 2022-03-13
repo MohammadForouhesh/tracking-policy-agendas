@@ -1,3 +1,14 @@
+"""
+Preprocessing
+
+....................................................................................................
+MIT License
+Copyright (c) 2021-2023 AUT Iran, Mohammad H Forouhesh
+Copyright (c) 2021-2022 MetoData.ai, Mohammad H Forouhesh
+....................................................................................................
+This module contains various tools for text preprocessing.
+"""
+
 import re
 
 
