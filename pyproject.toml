@@ -7,7 +7,7 @@ minversion = "6.0"
 addopts = "-ra --doctest-modules"
 testpaths = [
     "tracking_policy_agendas",
-    "main.py",
+    "test.py",
 ]
 
 [tool.black]
