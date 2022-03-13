@@ -1,5 +1,5 @@
 from xgboost import XGBClassifier
-from classifiers.meta_clf import MetaClf
+from .meta_clf import MetaClf
 
 
 class XgbClf(MetaClf):

@@ -2,11 +2,13 @@ import os
 import pickle
 import pandas as pd
 from tqdm import tqdm
-from word2vec.w2v_emb import W2VEmb
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
 
+from ..api import get_resources
+from ..preprocess.preprocessing import remove_redundant_characters, remove_emoji
+from ..word2vec.w2v_emb import W2VEmb
 
 
 class MetaClf:
@@ -16,7 +18,13 @@ class MetaClf:
         self.clf = classifier_instance
         self.emb = W2VEmb()
         self.scaler = None
-        if load_path is not None: self.load_model(load_path)
+        self.dir_path = os.path.dirname(
+            os.path.dirname(
+                os.path.dirname(
+                    os.path.realpath(__file__)))) + "/"
+        if load_path is not None:
+            get_resources(self.dir_path, resource_name=load_path)
+            self.load_model(load_path)
         else:
             assert text_array is not None and labels is not None
             text_array.fillna('', inplace=True)
@@ -32,17 +40,15 @@ class MetaClf:
         scaler.fit(encoded)
         return scaler
 
-    def build(self):
+    def fit(self):
         X_train, X_test, y_train, y_test = train_test_split(self.encoded_input, self.labels, test_size=0.2,
                                                             random_state=42, stratify=self.labels)
         self.clf.fit(X_train, y_train)
-        self.clf.score(X_test, y_test)
+        print('score: ', self.clf.score(X_test, y_test))
         print('============================trian============================')
         print(classification_report(y_train, self.clf.predict(X_train)))
         print('=============================test============================')
         print(classification_report(y_test, self.clf.predict(X_test)))
-        print('=========================proba=test==========================')
-        print(classification_report(y_test, self.predict_proba(X_test)))
         return self.clf
 
     def load_model(self, load_path: str):
@@ -60,13 +66,10 @@ class MetaClf:
         with open(saving_prep('scaler.pkl'), 'wb') as f:
             pickle.dump(self.scaler, f, pickle.HIGHEST_PROTOCOL)
 
-    def inference(self, input_text: str):
-        vector = self.scaler.transform(self.emb.encode(input_text).reshape(1, -1))
+    def __getitem__(self, item: str) -> int:
+        return self.predict(item)
+
+    def predict(self, input_text: str) -> int:
+        prep_text = remove_redundant_characters(remove_emoji(input_text))
+        vector = self.scaler.transform(self.emb.encode(prep_text).reshape(1, -1))
         return self.clf.predict(vector)[0]
-
-    def inference_proba(self, input_text: str):
-        vector = self.scaler.transform(self.emb.encode(input_text).reshape(1, -1))
-        return 1 if self.clf.predict_proba(vector)[0][1] >= 0.70 else 0
-
-    def predict_proba(self, array):
-        return list(map(int, self.clf.predict_proba(array)[:, 1] >= 0.70))
