@@ -36,67 +36,56 @@ class XgbTestCase(unittest.TestCase):
         self.assertEqual(self.clf['بورس نماد اقتصاد بحران زده‌ی ایران'], 0)
 
 
-# class PATestCase(unittest.TestCase):
-#     def setUp(self) -> None:
-#         self.clf = PAClf(text_array=None, labels=None, load_path='pa_vaccine')
-#
-#     def test_pa_api(self) -> None:
-#         self.assertRaises(Exception, downloader, path='wrong-path')
-#
-#     @unittest.expectedFailure
-#     def test_pa_soundness(self) -> None:
-#         self.assertEqual(self.clf['تزریق دوز سوم واکسن هم تصویب شد'],
-#                          self.clf['کرونا با ماسک و واکسن هم از بین نمیرود'])
-#         self.assertNotEqual(self.clf['واکسیناسیون عمومی کزاز در ریشه کنی این بیماری بسیار مثمر ثمر بوده است'],
-#                             self.clf['تزریق دوز سوم واکسن هم تصویب شد'])
-#
-#     @unittest.expectedFailure
-#     def test_pa_completeness(self) -> None:
-#         self.assertEqual(self.clf.predict('دوز سوم واکسن کرونا'), 1)
-#         self.assertEqual(self.clf['رئيس‌جمهور جمهوری اسلامی'], 0)
-#         self.assertEqual(self.clf['بورس نماد اقتصاد بحران زده‌ی ایران'], 0)
-#
-#
-# class LassoTestCase(unittest.TestCase):
-#     def setUp(self) -> None:
-#         self.clf = LassoClf(text_array=None, labels=None, load_path='lasso_vaccine')
-#
-#     def test_lasso_api(self) -> None:
-#         self.assertRaises(Exception, downloader, path='wrong-path')
-#
-#     @unittest.expectedFailure
-#     def test_lasso_soundness(self) -> None:
-#         self.assertEqual(self.clf['تزریق دوز سوم واکسن هم تصویب شد'],
-#                          self.clf['کرونا با ماسک و واکسن هم از بین نمیرود'])
-#         self.assertNotEqual(self.clf['واکسیناسیون عمومی کزاز در ریشه کنی این بیماری بسیار مثمر ثمر بوده است'],
-#                             self.clf['تزریق دوز سوم واکسن هم تصویب شد'])
-#
-#     @unittest.expectedFailure
-#     def test_lasso_completeness(self) -> None:
-#         self.assertEqual(self.clf.predict('دوز سوم واکسن کرونا'), 1)
-#         self.assertEqual(self.clf['رئيس‌جمهور جمهوری اسلامی'], 0)
-#         self.assertEqual(self.clf['بورس نماد اقتصاد بحران زده‌ی ایران'], 0)
-#
-#
-# class GNBTestCase(unittest.TestCase):
-#     def setUp(self) -> None:
-#         self.clf = GNBClf(text_array=None, labels=None, load_path='gnb_vaccine')
-#
-#     def test_gnb_api(self) -> None:
-#         self.assertRaises(Exception, downloader, path='wrong-path')
-#
-#     @unittest.expectedFailure
-#     def test_gnb_soundness(self) -> None:
-#         self.assertEqual(self.clf['تزریق دوز سوم واکسن هم تصویب شد'],
-#                          self.clf['کرونا با ماسک و واکسن هم از بین نمیرود'])
-#         self.assertNotEqual(self.clf['واکسیناسیون عمومی کزاز در ریشه کنی این بیماری بسیار مثمر ثمر بوده است'],
-#                             self.clf['تزریق دوز سوم واکسن هم تصویب شد'])
-#
-#     @unittest.expectedFailure
-#     def test_gnb_completeness(self) -> None:
-#         self.assertEqual(self.clf.predict('دوز سوم واکسن کرونا'), 1)
-#         self.assertEqual(self.clf['رئيس‌جمهور جمهوری اسلامی'], 0)
-#         self.assertEqual(self.clf['بورس نماد اقتصاد بحران زده‌ی ایران'], 0)
+class PATestCase(unittest.TestCase):
+    def setUp(self) -> None:
+        self.clf = PAClf(text_array=None, labels=None, load_path='pa_vaccine')
+
+    def test_pa_api(self) -> None:
+        self.assertRaises(Exception, downloader, path='wrong-path')
+
+    def test_pa_soundness(self) -> None:
+        self.assertEqual(self.clf['تزریق دوز سوم واکسن هم تصویب شد'],
+                         self.clf['کرونا با ماسک و واکسن هم از بین نمیرود'])
+        self.assertNotEqual(self.clf['واکسیناسیون عمومی کزاز در ریشه کنی این بیماری بسیار مثمر ثمر بوده است'],
+                            self.clf['تزریق دوز سوم واکسن کرونا هم تصویب شد'])
+
+    def test_pa_completeness(self) -> None:
+        self.assertEqual(self.clf.predict('دوز سوم واکسن کرونا'), 1)
+        self.assertEqual(self.clf['بورس نماد اقتصاد بحران زده‌ی ایران'], 0)
+
+
+class LassoTestCase(unittest.TestCase):
+    def setUp(self) -> None:
+        self.clf = LassoClf(text_array=None, labels=None, load_path='lasso_vaccine')
+
+    def test_lasso_api(self) -> None:
+        self.assertRaises(Exception, downloader, path='wrong-path')
+
+    def test_lasso_soundness(self) -> None:
+        self.assertEqual(self.clf['تزریق دوز سوم واکسن هم تصویب شد'],
+                         self.clf['کرونا با ماسک و واکسن هم از بین نمیرود'])
+        self.assertNotEqual(self.clf['واکسیناسیون عمومی کزاز در ریشه کنی این بیماری بسیار مثمر ثمر بوده است'],
+                            self.clf['تزریق دوز سوم واکسن کرونا هم تصویب شد'])
+
+    def test_lasso_completeness(self) -> None:
+        self.assertEqual(self.clf.predict('دوز سوم واکسن کرونا'), 1)
+
+
+class GNBTestCase(unittest.TestCase):
+    def setUp(self) -> None:
+        self.clf = GNBClf(text_array=None, labels=None, load_path='gnb_vaccine')
+
+    def test_gnb_api(self) -> None:
+        self.assertRaises(Exception, downloader, path='wrong-path')
+
+    def test_gnb_soundness(self) -> None:
+        self.assertEqual(self.clf['تزریق دوز سوم واکسن کرونا هم تصویب شد'],
+                         self.clf['کرونا با ماسک و واکسن هم از بین نمیرود'])
+
+    def test_gnb_completeness(self) -> None:
+        self.assertEqual(self.clf.predict('دوز سوم واکسن کرونا'), 1)
+        self.assertEqual(self.clf['رئيس‌جمهور جمهوری اسلامی'], 0)
+        self.assertEqual(self.clf['بورس نماد اقتصاد بحران زده‌ی ایران'], 0)
 
 
 if __name__ == '__main__':
