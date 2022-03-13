@@ -39,6 +39,7 @@ def downloader(path: str, save_path: str) -> Union[int, None]:
             resource.extractall(save_path)
     except Exception:
         raise Exception('not a proper webpage')
+    return 0
 
 
 def get_resources(dir_path: str, resource_name: str) -> Union[int, str]:
