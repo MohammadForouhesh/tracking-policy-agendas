@@ -4,8 +4,8 @@ import numpy as np
 import pandas as pd
 from gensim import utils
 from sklearn.pipeline import Pipeline
-from word2vec.w2v_corpus import W2VCorpus
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
+from .w2v_corpus import W2VCorpus
 
 
 class W2VEmb:
@@ -19,7 +19,7 @@ class W2VEmb:
         text_document = text_document.fillna('')
         self.tf_idf_transformation = self.tf_idf_transformer(text_document)
         self.wv2_corpus = W2VCorpus(text_document)
-        self.w2v_model = gensim.models.Word2Vec(sentences=self.wv2_corpus, min_count=100, vector_size=900, epochs=50)
+        self.w2v_model = gensim.models.Word2Vec(sentences=self.wv2_corpus, min_count=1, vector_size=900, epochs=50)
 
     def __getitem__(self, text: str) -> np.ndarray:
         try:    return self.w2v_model.wv[text]
