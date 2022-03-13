@@ -20,6 +20,12 @@ class MetaSkLearnClf(MetaClf):
         if kwargs['load_path'] is not None: self.load_model(kwargs['load_path'])
 
     def load_model(self, load_path: str):
+        """
+        A tool to load model from disk.
+        :param load_path:   Model path.
+        :return:            None
+        """
+
         loading_prep = lambda string: f'model_dir/{load_path}/{string}'
         self.emb.load(loading_prep('emb.pkl'))
         with open(loading_prep('model.pkl'), 'rb') as f:
@@ -28,6 +34,12 @@ class MetaSkLearnClf(MetaClf):
             self.scaler = pickle.load(f)
 
     def save_model(self, save_path: str):
+        """
+        A tool to save model to disk
+        :param save_path:   Saving path.
+        :return:            None.
+        """
+
         os.makedirs(f'model_dir/{save_path}', exist_ok=True)
         saving_prep = lambda string: f'model_dir/{save_path}/{string}'
         self.emb.save(saving_prep('emb.pkl'))
