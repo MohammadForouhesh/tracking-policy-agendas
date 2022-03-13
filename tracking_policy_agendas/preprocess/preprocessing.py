@@ -13,6 +13,11 @@ import re
 
 
 def remove_emoji(text: str) -> str:
+    """
+    A function to remove emojis using regex
+    :param text:    An input text.
+    :return:        A text with removed emojis
+    """
     emoji_pattern = re.compile(pattern="["
                                        u"\U0001F600-\U0001F64F"  # emoticons
                                        u"\U0001F300-\U0001F5FF"  # symbols & pictographs
@@ -48,6 +53,11 @@ def remove_emoji(text: str) -> str:
 
 
 def remove_redundant_characters(text: str) -> str:
+    """
+    A tool to remove redundant and unwanted characters
+    :param text:    An input text.
+    :return:        A text with removed unwanted characters (punctuations, latin, etc.)
+    """
     text = text.replace('\u200c', ' ')
     text = re.sub(r'@[A-Za-z0-9]+', ' ', text)  # Removed @mentions
     text = re.sub(r'_[A-Za-z0-9]+', ' ', text)  # Removed underlines
