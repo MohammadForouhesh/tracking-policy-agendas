@@ -6,12 +6,13 @@ from .meta_clf import MetaClf
 class MetaSkLearnClf(MetaClf):
     def __init__(self, classifier_instance, **kwargs):
         super().__init__(classifier_instance=classifier_instance, **kwargs)
+        if kwargs['load_path'] is not None: self.load_model(kwargs['load_path'])
 
     def load_model(self, load_path: str):
         loading_prep = lambda string: f'model_dir/{load_path}/{string}'
         self.emb.load(loading_prep('emb.pkl'))
         with open(loading_prep('model.pkl'), 'rb') as f:
-            self.scaler = pickle.load(f)
+            self.clf = pickle.load(f)
         with open(loading_prep('scaler.pkl'), 'rb') as f:
             self.scaler = pickle.load(f)
 
