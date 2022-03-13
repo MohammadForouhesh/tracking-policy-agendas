@@ -20,10 +20,10 @@ import requests
 import zipfile
 from io import BytesIO
 
-http_dict = {'xgb_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/xgb_vaccine',
-             'pa_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/pa_vaccine',
-             'lasso_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/lasso_vaccine',
-             'gnb_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/gnb_vaccine'}
+http_dict = {'xgb_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/xgb_vaccine.zip',
+             'pa_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/pa_vaccine.zip',
+             'lasso_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/lasso_vaccine.zip',
+             'gnb_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/gnb_vaccine.zip'}
 
 
 def downloader(path: str, save_path: str) -> Union[int, None]:
@@ -49,7 +49,7 @@ def get_resources(dir_path: str, resource_name: str) -> str:
     :param resource_name:   Resource name.
     :return:                Path to the downloaded resource.
     """
-    save_dir = dir_path + f'/model_dir/{resource_name}'
+    save_dir = dir_path + '/model_dir/'
     os.makedirs(save_dir, exist_ok=True)
     downloader(path=http_dict[resource_name], save_path=save_dir)
     return str(save_dir + resource_name)

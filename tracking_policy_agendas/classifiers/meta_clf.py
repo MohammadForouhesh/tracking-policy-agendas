@@ -5,6 +5,8 @@ from tqdm import tqdm
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
+
+from ..api import get_resources
 from ..preprocess.preprocessing import remove_redundant_characters, remove_emoji
 from ..word2vec.w2v_emb import W2VEmb
 
@@ -16,6 +18,11 @@ class MetaClf:
         self.clf = classifier_instance
         self.emb = W2VEmb()
         self.scaler = None
+        self.dir_path = os.path.dirname(
+            os.path.dirname(
+                os.path.dirname(
+                    os.path.realpath(__file__)))) + "/"
+        get_resources(self.dir_path, resource_name=load_path)
         if load_path is not None: self.load_model(load_path)
         else:
             assert text_array is not None and labels is not None
