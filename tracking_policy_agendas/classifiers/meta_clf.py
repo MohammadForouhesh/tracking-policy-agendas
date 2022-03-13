@@ -22,8 +22,9 @@ class MetaClf:
             os.path.dirname(
                 os.path.dirname(
                     os.path.realpath(__file__)))) + "/"
-        get_resources(self.dir_path, resource_name=load_path)
-        if load_path is not None: self.load_model(load_path)
+        if load_path is not None:
+            get_resources(self.dir_path, resource_name=load_path)
+            self.load_model(load_path)
         else:
             assert text_array is not None and labels is not None
             text_array.fillna('', inplace=True)
