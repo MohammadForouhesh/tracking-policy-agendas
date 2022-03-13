@@ -1,3 +1,14 @@
+"""
+Meta Class for Classifiers
+
+....................................................................................................
+MIT License
+Copyright (c) 2021-2023 AUT Iran, Mohammad H Forouhesh
+Copyright (c) 2021-2022 MetoData.ai, Mohammad H Forouhesh
+....................................................................................................
+This module abstracts classifiers.
+"""
+
 import os
 import pickle
 import pandas as pd
