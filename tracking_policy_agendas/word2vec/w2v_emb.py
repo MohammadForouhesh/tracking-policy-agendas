@@ -1,3 +1,14 @@
+"""
+Word2Vec Embedding
+
+....................................................................................................
+MIT License
+Copyright (c) 2021-2023 AUT Iran, Mohammad H Forouhesh
+Copyright (c) 2021-2022 MetoData.ai, Mohammad H Forouhesh
+....................................................................................................
+This module encapsulate the Word2Vec embedding of a given corpus.
+"""
+
 import pickle
 import gensim
 import numpy as np
