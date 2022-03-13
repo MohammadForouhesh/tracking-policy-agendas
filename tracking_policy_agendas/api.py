@@ -7,10 +7,14 @@ Copyright (c) 2021-2022 MetoData.ai, Mohammad H Forouhesh
 ....................................................................................................
 This module contains tools to download resources over http connections.
 supported http links are:
-    - 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/xgb_vaccine',
-    - 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/pa_vaccine',
-    - 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/lasso_vaccine',
-    - 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/gnb_vaccine'
+    - 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/xgb_vaccine.zip'
+    - 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/pa_vaccine.zip'
+    - 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/lasso_vaccine.zip'
+    - 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/gnb_vaccine.zip'
+    - 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/xgb_jcpoa.zip'
+    - 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/pa_jcpoa.zip'
+    - 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/lasso_jcpoa.zip',
+    - 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/gnb_jcpoa.zip'
 """
 
 import os
@@ -22,7 +26,11 @@ import requests
 http_dict = {'xgb_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/xgb_vaccine.zip',
              'pa_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/pa_vaccine.zip',
              'lasso_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/lasso_vaccine.zip',
-             'gnb_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/gnb_vaccine.zip'}
+             'gnb_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/gnb_vaccine.zip',
+             'xgb_jcpoa': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/xgb_jcpoa',
+             'pa_jcpoa': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/pa_jcpoa',
+             'lasso_jcpoa': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/lasso_jcpoa',
+             'gnb_jcpoa': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/gnb_jcpoa'}
 
 
 def downloader(path: str, save_path: str) -> Union[int, None]:
