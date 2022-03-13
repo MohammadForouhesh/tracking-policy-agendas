@@ -40,9 +40,9 @@
 - [x] Seed words
 - [x] Classification heads
 - [x] Results & Analysis
-- [ ] Tests&Coverage
+- [x] Tests&Coverage
 - [ ] Documentation
-- [ ] CI/CD
+- [x] CI/CD
 - [ ] Smooth Installation
 
 ## A Brief Summary of The Papers <a name="summary"></a>
