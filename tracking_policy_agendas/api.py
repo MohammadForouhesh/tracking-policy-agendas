@@ -7,9 +7,10 @@ Copyright (c) 2021-2022 MetoData.ai, Mohammad H Forouhesh
 ....................................................................................................
 This module contains tools to download resources over http connections.
 supported http links are:
-    - https://github.com/MohammadForouhesh/crf-pos-persian/releases/download/v2.0.0.alpha/UPC_full_model_wapiti
-    - https://github.com/MohammadForouhesh/crf-pos-persian/releases/download/v2.0.0.alpha/perpos.model
-    - https://github.com/MohammadForouhesh/crf-pos-persian/releases/download/v2.0.0.alpha/corrections.txt
+    - 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/xgb_vaccine',
+    - 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/pa_vaccine',
+    - 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/lasso_vaccine',
+    - 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/gnb_vaccine'
 """
 
 import os
@@ -19,18 +20,17 @@ import requests
 import zipfile
 from io import BytesIO
 
-http_dict = {'xgb_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/xgb_vaccine',
-             'pa_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/pa_vaccine',
-             'lasso_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/lasso_vaccine',
-             'gnb_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/gnb_vaccine'}
+http_dict = {'xgb_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/xgb_vaccine',
+             'pa_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/pa_vaccine',
+             'lasso_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/lasso_vaccine',
+             'gnb_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/gnb_vaccine'}
 
 
-def downloader(path: str, save_path: str, mode: str) -> Union[int, None]:
+def downloader(path: str, save_path: str) -> Union[int, None]:
     """
     A tool to download and save files over https.
     :param path:        The path to the desired file.
     :param save_path:   The intended storage path.
-    :param mode:        The mode that it should be stored.
     :return:            If the file exists, it returns 0 (int), otherwise nothing would be returned.
     """
     if os.path.isfile(save_path): return 0
@@ -51,5 +51,5 @@ def get_resources(dir_path: str, resource_name: str) -> str:
     """
     save_dir = dir_path + f'/model_dir/{resource_name}'
     os.makedirs(save_dir, exist_ok=True)
-    downloader(path=http_dict[resource_name], save_path=save_dir, mode='wb')
+    downloader(path=http_dict[resource_name], save_path=save_dir)
     return str(save_dir + resource_name)
