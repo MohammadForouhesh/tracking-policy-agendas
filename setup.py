@@ -46,7 +46,7 @@ def setup_package():
     setup(
         name='tracking_policy_agendas',
         packages=PACKAGES,
-        version='1.0.0',
+        version='1.0.1',
         url='https://github.com/MohammadForouhesh/tracking-policy-agendas',
         license='MIT',
         author='MohammadForouhesh',
