@@ -26,7 +26,7 @@ from ..word2vec.w2v_emb import W2VEmb
 
 
 class MetaClf:
-    def __init__(self, classifier_instance, text_array: list = None, embedding_doc: list = None, labels: list = None, load_path: str = None):
+    def __init__(self, classifier_instance, text_array: List[str] = None, embedding_doc: list = None, labels: list = None, load_path: str = None):
         if not isinstance(text_array, pd.Series): text_array = pd.Series(text_array)
 
         self.clf = classifier_instance
@@ -49,7 +49,7 @@ class MetaClf:
             self.scaler = self.prep_scaler(encoded)
             self.encoded_input = self.scaler.transform(encoded)
 
-    def prep_scaler(self, encoded: List[int]) -> MinMaxScaler:
+    def prep_scaler(self, encoded: List[np.ndarray]) -> MinMaxScaler:
         """
         Fitting a Min-Max Scaler to use in the pipeline
         :param encoded:     An array of numbers.
