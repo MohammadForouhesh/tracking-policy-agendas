@@ -41,9 +41,9 @@
 - [x] Classification heads
 - [x] Results & Analysis
 - [x] Tests&Coverage
-- [ ] Documentation
+- [x] Documentation
 - [x] CI/CD
-- [ ] Smooth Installation
+- [x] Smooth Installation
 
 ## A Brief Summary of The Papers <a name="summary"></a>
 * #### Introduction: <a name="tpa_intro"></a>

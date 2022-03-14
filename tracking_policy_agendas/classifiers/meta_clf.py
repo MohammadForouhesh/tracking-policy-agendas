@@ -11,7 +11,7 @@ This module abstracts classifiers.
 
 import os
 import pickle
-from typing import List
+from typing import List, Union
 
 import numpy as np
 import pandas as pd
@@ -26,7 +26,8 @@ from ..word2vec.w2v_emb import W2VEmb
 
 
 class MetaClf:
-    def __init__(self, classifier_instance, text_array: List[str] = None, embedding_doc: list = None, labels: list = None, load_path: str = None):
+    def __init__(self, classifier_instance, text_array: Union[List[str], pd.Series] = None, embedding_doc: list = None,
+                 labels: list = None, load_path: str = None):
         if not isinstance(text_array, pd.Series): text_array = pd.Series(text_array)
 
         self.clf = classifier_instance
