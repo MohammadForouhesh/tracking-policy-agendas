@@ -13,8 +13,9 @@ import pickle
 import gensim
 import numpy as np
 import pandas as pd
-from gensim import utils
 from typing import List, Generator
+
+from gensim import utils
 from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from .w2v_corpus import W2VCorpus

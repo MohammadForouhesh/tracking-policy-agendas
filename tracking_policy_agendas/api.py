@@ -27,10 +27,10 @@ http_dict = {'xgb_vaccine': 'https://github.com/MohammadForouhesh/tracking-polic
              'pa_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/pa_vaccine.zip',
              'lasso_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/lasso_vaccine.zip',
              'gnb_vaccine': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/bin/gnb_vaccine.zip',
-             'xgb_jcpoa': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/xgb_jcpoa',
-             'pa_jcpoa': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/pa_jcpoa',
-             'lasso_jcpoa': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/lasso_jcpoa',
-             'gnb_jcpoa': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/gnb_jcpoa'}
+             'xgb_jcpoa': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/xgb_jcpoa.zip',
+             'pa_jcpoa': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/pa_jcpoa.zip',
+             'lasso_jcpoa': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/lasso_jcpoa.zip',
+             'gnb_jcpoa': 'https://github.com/MohammadForouhesh/tracking-policy-agendas/releases/download/v1.0.0/gnb_jcpoa.zip'}
 
 
 def downloader(path: str, save_path: str) -> Union[int, None]:
@@ -40,12 +40,10 @@ def downloader(path: str, save_path: str) -> Union[int, None]:
     :param save_path:   The intended storage path.
     :return:            If the file exists, it returns 0 (int), otherwise nothing would be returned.
     """
-    try:
-        model_bin = requests.get(path, allow_redirects=True)
-        with zipfile.ZipFile(BytesIO(model_bin.content)) as resource:
-            resource.extractall(save_path)
-    except Exception:
-        raise Exception('not a proper webpage')
+    assert path in http_dict.values(), f'{path[-path[::-1].find("/"):]} is not a supported models, use: \n{http_dict}'
+    model_bin = requests.get(path, allow_redirects=True)
+    with zipfile.ZipFile(BytesIO(model_bin.content)) as resource:
+        resource.extractall(save_path)
     return 0
 
 
