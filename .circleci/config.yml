@@ -83,10 +83,10 @@ workflows:
           requires:
             - lint
             - test
-      # - test_pypi:
-          # filters:
-          #   branches:
-          #     only:                
-          #       - main
-          # requires:
-          #   - coverage
+      - test_pypi:
+          filters:
+            branches:
+              only:                
+                - main
+          requires:
+            - coverage
