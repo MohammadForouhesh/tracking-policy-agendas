@@ -45,8 +45,8 @@ class W2VEmb:
         :param text:    Input text.
         :return:        A numpy array of embedding array.
         """
-        try:    return self.w2v_model.wv[text]
-        except: return np.array([0 for _ in range(0, self.w2v_model.vector_size)])
+        try:                return self.w2v_model.wv[text]
+        except KeyError:    return np.array([0 for _ in range(0, self.w2v_model.vector_size)])
 
     def tf_idf_transformer(self, text_series):
         """
