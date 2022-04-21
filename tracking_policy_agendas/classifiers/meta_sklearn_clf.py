@@ -17,7 +17,7 @@ from .meta_clf import MetaClf
 class MetaSkLearnClf(MetaClf):
     def __init__(self, classifier_instance, **kwargs):
         super().__init__(classifier_instance=classifier_instance, **kwargs)
-        if kwargs['load_path'] is not None: self.load_model(kwargs['load_path'])
+        if 'load_path' in kwargs and kwargs['load_path'] is not None: self.load_model(kwargs['load_path'])
 
     def load_model(self, load_path: str):
         """
