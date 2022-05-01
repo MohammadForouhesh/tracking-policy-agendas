@@ -20,7 +20,7 @@ from tracking_policy_agendas.classifiers.lasso_clf import LassoClf
 
 class XgbTestCase(unittest.TestCase):
     def setUp(self) -> None:
-        self.clf = XgbClf(text_array=None, labels=None, load_path='xgb_vaccine')
+        self.clf = XgbClf(load_path='xgb_vaccine')
 
     def test_xgb_api(self) -> None:
         self.assertRaises(Exception, downloader, path='wrong-path')
@@ -31,14 +31,14 @@ class XgbTestCase(unittest.TestCase):
                             self.clf['تزریق دوز سوم واکسن کرونا هم تصویب شد'])
 
     def test_xgb_completeness(self) -> None:
-        self.assertEqual(self.clf.predict('دوز سوم واکسن کرونا'), 1)
+        self.assertEqual(self.clf.vec_predict('دوز سوم واکسن کرونا'), 1)
         self.assertEqual(self.clf['رئيس‌جمهور جمهوری اسلامی'], 0)
         self.assertEqual(self.clf['بورس نماد اقتصاد بحران زده‌ی ایران'], 0)
 
 
 class PATestCase(unittest.TestCase):
     def setUp(self) -> None:
-        self.clf = PAClf(text_array=None, labels=None, load_path='pa_vaccine')
+        self.clf = PAClf(load_path='pa_vaccine')
 
     def test_pa_api(self) -> None:
         self.assertRaises(Exception, downloader, path='wrong-path')
@@ -50,13 +50,13 @@ class PATestCase(unittest.TestCase):
                             self.clf['تزریق دوز سوم واکسن کرونا هم تصویب شد'])
 
     def test_pa_completeness(self) -> None:
-        self.assertEqual(self.clf.predict('دوز سوم واکسن کرونا'), 1)
+        self.assertEqual(self.clf.vec_predict('دوز سوم واکسن کرونا'), 1)
         self.assertEqual(self.clf['بورس نماد اقتصاد بحران زده‌ی ایران'], 0)
 
 
 class LassoTestCase(unittest.TestCase):
     def setUp(self) -> None:
-        self.clf = LassoClf(text_array=None, labels=None, load_path='lasso_vaccine')
+        self.clf = LassoClf(load_path='lasso_vaccine')
 
     def test_lasso_api(self) -> None:
         self.assertRaises(Exception, downloader, path='wrong-path')
@@ -73,7 +73,7 @@ class LassoTestCase(unittest.TestCase):
 
 class GNBTestCase(unittest.TestCase):
     def setUp(self) -> None:
-        self.clf = GNBClf(text_array=None, labels=None, load_path='gnb_vaccine')
+        self.clf = GNBClf(load_path='gnb_vaccine')
 
     def test_gnb_api(self) -> None:
         self.assertRaises(Exception, downloader, path='wrong-path')
@@ -83,7 +83,7 @@ class GNBTestCase(unittest.TestCase):
                          self.clf['کرونا با ماسک و واکسن هم از بین نمیرود'])
 
     def test_gnb_completeness(self) -> None:
-        self.assertEqual(self.clf.predict('دوز سوم واکسن کرونا'), 1)
+        self.assertEqual(self.clf.vec_predict('دوز سوم واکسن کرونا'), 1)
         self.assertEqual(self.clf['رئيس‌جمهور جمهوری اسلامی'], 0)
         self.assertEqual(self.clf['بورس نماد اقتصاد بحران زده‌ی ایران'], 0)
 
