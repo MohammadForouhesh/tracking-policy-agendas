@@ -26,7 +26,7 @@ class XgbTestCase(unittest.TestCase):
         self.assertRaises(Exception, downloader, path='wrong-path')
 
     def test_xgb_soundness(self) -> None:
-        self.assertEqual(self.clf['تزریق دوز سوم واکسن هم تصویب شد'], self.clf['کرونا با ماسک و واکسن هم از بین نمیرود'])
+        self.assertNotEqual(self.clf['تزریق واکسن هم اجباری شد'], self.clf['کرونا با ماسک و واکسن هم از بین نمیرود'])
         self.assertNotEqual(self.clf['واکسیناسیون عمومی کزاز در ریشه کنی این بیماری بسیار مثمر ثمر بوده است'],
                             self.clf['تزریق دوز سوم واکسن کرونا هم تصویب شد'])
 
@@ -44,7 +44,7 @@ class PATestCase(unittest.TestCase):
         self.assertRaises(Exception, downloader, path='wrong-path')
 
     def test_pa_soundness(self) -> None:
-        self.assertEqual(self.clf['تزریق دوز سوم واکسن هم تصویب شد'],
+        self.assertNotEqual(self.clf['تزریق واکسن هم اجباری شد'],
                          self.clf['کرونا با ماسک و واکسن هم از بین نمیرود'])
         self.assertNotEqual(self.clf['واکسیناسیون عمومی کزاز در ریشه کنی این بیماری بسیار مثمر ثمر بوده است'],
                             self.clf['تزریق دوز سوم واکسن کرونا هم تصویب شد'])
@@ -62,13 +62,13 @@ class LassoTestCase(unittest.TestCase):
         self.assertRaises(Exception, downloader, path='wrong-path')
 
     def test_lasso_soundness(self) -> None:
-        self.assertEqual(self.clf['تزریق دوز سوم واکسن هم تصویب شد'],
+        self.assertNotEqual(self.clf['تزریق دوز سوم واکسن هم تصویب شد'],
                          self.clf['کرونا با ماسک و واکسن هم از بین نمیرود'])
         self.assertNotEqual(self.clf['واکسیناسیون عمومی کزاز در ریشه کنی این بیماری بسیار مثمر ثمر بوده است'],
                             self.clf['تزریق دوز سوم واکسن کرونا هم تصویب شد'])
 
     def test_lasso_completeness(self) -> None:
-        self.assertEqual(self.clf.predict('دوز سوم واکسن کرونا'), 1)
+        self.assertEqual(self.clf.vec_predict('دوز سوم واکسن کرونا'), 1)
 
 
 class GNBTestCase(unittest.TestCase):
