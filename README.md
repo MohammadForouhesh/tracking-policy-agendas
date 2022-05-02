@@ -16,7 +16,7 @@
 
 # Table of Contents
 1. [TODO](#todo)
-2. [A Brief Summary of The Papers](#summary)
+2. [A Brief Overview](#summary)
     1. [Introduction](#tpa_intro)
     2. [Main Problem](#tpa_main)
     3. [Illustrative Example](#tpa_example)
@@ -45,7 +45,7 @@
 - [x] CI/CD
 - [x] Smooth Installation
 
-## A Brief Summary of The Papers <a name="summary"></a>
+## A Brief Overview <a name="summary"></a>
 * #### Introduction: <a name="tpa_intro"></a>
   <div style="text-align: justify"> This work aims to analyse political orientation of legislators on salient policy issues through their temporally granular tweets, using a word embedding for feature extraction, and a classifier to label all legislators’ past and current relevant tweets according to whether they express a particular issue position over time. </div> 
 * #### Main Problem: <a name="tpa_main"></a>
