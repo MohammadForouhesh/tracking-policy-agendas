@@ -30,7 +30,7 @@
     4. [I/O](#tpa_io)
     5. [Motivation](#tpa_motiv)
     6. [Related Works](#tpa_lit)
-    7. [Contributions of this paper](#tpa_contribution)
+    7. [Contributions](#tpa_contribution)
     8. [Proposed Method](#tpa_method)
     9. [Experiments](#tpa_exp)
 3. [Implementation details](#tpa_imp)
@@ -58,9 +58,9 @@
 * #### Main Problem: <a name="tpa_main"></a>
     <div style="text-align: justify"> Is it possible to accurately analyse the temporal evolution of political orientation on salient issues by applying natural language processing techniques on users tweets? </div> 
 
-    <div style="text-align: justify"> The issues of concern in this paper are <b> immigration</b>, and <b>climate change</b>.  </div>
+    <div style="text-align: justify"> The issues of concern in this project are <b> immigration</b>, and <b>climate change</b>.  </div>
 * #### Illustrative Example: <a name="tpa_example"></a>
-    <div style="text-align: justify"> Given a tweet about immigration policy, they first encode it using word2vec enhanced dictionary, then its exclusiveness or inclusiveness can be detected using a classifier. Furthermore these results can be disaggregated to see whether it was posted from a Republican or a Democrat.  </div>
+    <div style="text-align: justify"> Given a tweet about immigration policy, we first encode it using word2vec enhanced dictionary, then its exclusiveness or inclusiveness can be detected using a classifier. Furthermore these results can be disaggregated to see whether it was posted from a Republican or a Democrat.  </div>
 * #### I/O: <a name="tpa_io"></a>
   * Input: Tweets (textual modality)
   * Output: Predicted stance on the salient political issue
@@ -81,7 +81,7 @@
     7. RSS feeds: [Cormack 2013](https://personal.stevens.edu/~lcormack/sins_of_omission_orig.pdf)
     8. Social media posts: [Gulati and Williams 2010](https://opensiuc.lib.siu.edu/pn_wp/43/); [Barbera et al. 2018](https://pubmed.ncbi.nlm.nih.gov/33303996/); [Radford and Sinclair 2016](https://www.semanticscholar.org/paper/Electronic-Homestyle-%3A-Tweeting-Ideology-∗-Radford-Sinclair/ac077dbf0040a13a4766f3f178c230fae4546b34); [Shapiro et al. 2014](https://m.japss.org/upload/1.%20Final%20Park.pdf); [Lilleker and Koc-Michalska 2013](https://journals.sagepub.com/doi/full/10.1177/1461444815616218)
 
-* #### Contributions of this paper: <a name="tpa_contribution"></a>
+* #### Contributions: <a name="tpa_contribution"></a>
     1. <div style="text-align: justify"> Simple, transparent, and interpretable approach to tweet classification can achieve satisfactory levels of accuracy across diverse issues. </div>
     2. <div style="text-align: justify"> Automate the process of updating and maintaining the model. </div>
     3. <div style="text-align: justify"> Develop a dynamical, real-time scalable method for tracking elected officials’ expressed policy positions through their tweets. </div> 
