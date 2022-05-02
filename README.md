@@ -10,6 +10,13 @@
 ![ask]
 
 [ask]: https://img.shields.io/badge/Ask%20me-anything-1.svg
+ 
+> Mohammad H. Forouhesh
+> 
+> Metodata Inc ®
+> 
+> April 25, 2022
+
 
  This repository contains the implementation for the following paper:
  > [Tracking Legislators’ Expressed Policy Agendas in Real Time](https://osf.io/preprints/socarxiv/ync87/)
