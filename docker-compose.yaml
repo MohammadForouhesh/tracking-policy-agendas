@@ -1,0 +1,12 @@
+version: '3'
+services:
+  tracking-policy-agendas:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    volumes:
+      - /usr/app/resources
+      - .:/user/app
+    command: ["python", "test.py"]
